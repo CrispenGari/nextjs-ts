@@ -30,25 +30,27 @@ Components  -> Name them using camel case eg NavBar.js, Layout.js
 
 ### Structuring Folders
 
-```js
-app.next;
-components;
-Head.js;
-Layout.js;
-Layout.module.css;
-Nav.js;
-node_modules;
-pages;
-_app.js;
-about.js;
-index.js;
-static;
-styles;
-globals.css.gitignore;
-next.config.js;
-package.json;
-README.md;
-yarn.lock;
+```
+app
+    .next
+    components
+        Head.js
+        Layout.js
+        Layout.module.css
+        Nav.js
+    node_modules
+    pages
+        _app.js
+        about.js
+        index.js
+    static
+    styles
+        globals.css
+    .gitignore
+    next.config.js
+    package.json
+    README.md
+    yarn.lock
 ```
 
 Go ahead and create a `_app.js` file so that we can override the next's default.
