@@ -1,0 +1,19 @@
+{
+  "name": "create-next-app-default",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^10.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
