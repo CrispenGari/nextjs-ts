@@ -1,0 +1,26 @@
+.headerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 20px;
+  cursor: pointer;
+  transition: transform 100ms ease-in 100ms;
+  width: 30px;
+}
+.headerItem > p {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  user-select: none;
+  display: none;
+}
+.headerItem__icon {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.headerItem:hover > p {
+  display: inline-flex;
+}
+.headerItem:hover {
+  transform: scale(1.09);
+}

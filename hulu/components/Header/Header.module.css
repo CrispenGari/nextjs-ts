@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header__right > h1 {
+  font-size: 30px;
+  user-select: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+.header__left {
+  display: flex;
+  height: 50px;
+}
+
+@media only screen and (max-width: 425px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
