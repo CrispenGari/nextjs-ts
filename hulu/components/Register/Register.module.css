@@ -1,0 +1,62 @@
+.register {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px solid lightseagreen;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 50px auto 0px auto;
+  justify-content: center;
+}
+.register > input {
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border: 1px solid lightseagreen;
+  border-radius: 5px;
+}
+.register h1 {
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.register p {
+  width: 100%;
+  margin: 5px;
+  text-align: center;
+  font-size: 15px;
+  user-select: none;
+}
+.register p:first-of-type {
+  color: red;
+  font-style: italic;
+}
+.register p > span {
+  cursor: pointer;
+  color: lightseagreen;
+}
+.register p > span:hover {
+  text-decoration: underline;
+}
+
+.register button {
+  width: 150px;
+  margin: 10px auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.register button:active {
+  background: lightseagreen;
+  color: white;
+}
