@@ -5,13 +5,19 @@ import Movies from "../components/Movies/Movies";
 import Auth from "../components/Auth/Auth";
 import endpoints from "../utils/endpoints";
 import Axios from "axios";
-const Home = ({ data }) => {
+const Home = ({ data, user }) => {
+  console.log("user", user);
   return (
     <div className={styles.app}>
-      <Auth />
-      {/* <Header />
-      <Nav />
-      <Movies movies={data?.results} /> */}
+      {user ? (
+        <Auth />
+      ) : (
+        <>
+          <Header />
+          <Nav />
+          <Movies movies={data?.results} />
+        </>
+      )}
     </div>
   );
 };
@@ -27,9 +33,19 @@ export async function getServerSideProps(context) {
       : `https://api.themoviedb.org/3${endpoints["recommended"]?.url}`,
   });
 
+  let user;
+  await Axios({
+    withCredentials: true,
+    method: "GET",
+    url: "http://localhost:3001/user",
+  }).then((res) => {
+    user = res.data;
+  });
+
   return {
     props: {
-      data: data,
+      data,
+      user,
     },
   };
 }

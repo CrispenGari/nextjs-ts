@@ -1,11 +1,11 @@
 import styles from "./Movie.module.css";
 import Image from "next/image";
 import { BiLike } from "react-icons/bi";
-const Movie = ({ movie }) => {
+const Movie = ({ movie, playMovie }) => {
   const base_url = "https://image.tmdb.org/t/p/original/";
   return (
     movie?.backdrop_path && (
-      <div className={styles.movie}>
+      <div className={styles.movie} onClick={() => playMovie(movie)}>
         <img
           layout="responsive"
           alt="Movie"
