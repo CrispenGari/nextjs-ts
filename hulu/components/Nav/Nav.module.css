@@ -10,9 +10,10 @@
   margin: 0px 10px 0px 0px;
   cursor: pointer;
   text-transform: capitalize !important;
-  width: 130px;
+  width: 130px !important;
   white-space: nowrap !important;
   user-select: none !important;
+  text-align: center;
 }
 .nav::-webkit-scrollbar {
   display: none;

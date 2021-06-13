@@ -6,6 +6,6 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ["png.pngitem.com"],
+    domains: ["image.tmdb.org"],
   },
 };
