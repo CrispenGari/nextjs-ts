@@ -8,7 +8,7 @@ import bodyParser from "body-parser";
 import passport from "passport";
 import url from "./connection";
 import Users from "./models";
-import localStrategy from "./strategies";
+import local from "./strategies";
 
 const app: Application = express();
 
@@ -36,8 +36,7 @@ mongoose.connection.once("open", () => {
 // midlewares
 
 app.use(express.json());
-
-app.use(cookieParser("mysecret"));
+app.use(cookieParser("anything"));
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -51,27 +50,27 @@ app.use(
 );
 app.use(
   session({
-    secret: "mysecret",
-    resave: false,
+    secret: "anything",
+    // resave: true,
     // saveUninitialized: true,
     // cookie: {
-    //   maxAge: 30 * 24 * 60 * 60 * 60 * 1000,
+    //   maxAge: 3600000 * 24 * 7,
+    //   sameSite: false,
     // },
   })
 );
 app.use(passport.initialize());
 app.use(passport.session());
-passport.use(localStrategy);
+passport.use(local);
 
 passport.serializeUser((user: any, callback: any) => {
   callback(null, user._id);
 });
 
 passport.deserializeUser((id: string, callback: any) => {
+  console.log(id);
   Users.findById(id, (error: Error, user: any) => {
-    callback(error, {
-      username: user.username,
-    });
+    callback(error, user);
   });
 });
 
@@ -125,19 +124,23 @@ app.post("/register", (req, res, next) => {
 app.post("/login", (req, res, next) => {
   const { username, password } = req.body;
   console.log(req.user);
-  passport.authenticate("local", (error: Error, user: any, info: any) => {
-    if (!user) {
-      res.status(200).send("Invalid username(email) or password.");
-    } else {
-      req.logIn(user, (error) => {
-        if (error) {
-          throw error;
-        } else {
-          res.send("ok");
-        }
-      });
+  passport.authenticate(
+    "local",
+    { session: true },
+    (error: Error, user: any, info: any) => {
+      if (!user) {
+        res.status(200).send("Invalid username(email) or password.");
+      } else {
+        req.logIn(user, (error) => {
+          if (error) {
+            throw error;
+          } else {
+            res.send("ok");
+          }
+        });
+      }
     }
-  })(req, res, next);
+  )(req, res, next);
 });
 app.listen(3001, () => {
   console.log("Server started");

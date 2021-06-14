@@ -1358,11 +1358,6 @@
   "resolved" "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz"
   "version" "1.2.5"
 
-"movie-trailer@^1.0.4":
-  "integrity" "sha512-Z2ipVu7MiF1bRd+qvyqnsTBB9Y1DQSsMlTlxlvZ4+UcSqX6pQbnTt9f7IGYWltam9qY57bF+GlEwpGY3l+BoQA=="
-  "resolved" "https://registry.npmjs.org/movie-trailer/-/movie-trailer-1.0.4.tgz"
-  "version" "1.0.4"
-
 "ms@2.0.0":
   "integrity" "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
   "resolved" "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz"

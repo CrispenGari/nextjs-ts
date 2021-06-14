@@ -1,5 +1,4 @@
 import styles from "./Movie.module.css";
-import Image from "next/image";
 import { BiLike } from "react-icons/bi";
 const Movie = ({ movie, playMovie }) => {
   const base_url = "https://image.tmdb.org/t/p/original/";

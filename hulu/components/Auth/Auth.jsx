@@ -36,3 +36,11 @@ const Auth = () => {
 };
 
 export default Auth;
+
+// const logout = () => {
+//     Axios.get("http://localhost:3001/auth/logout", {
+//       withCredentials: true,
+//     }).then((res) => {
+//       window.location = "http://localhost:3000";
+//     });
+//   };

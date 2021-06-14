@@ -1,8 +1,7 @@
 .movie {
-  margin: 5px;
+  margin: 5px 5px 20px 5px;
   user-select: none;
   width: 400px;
-  /* height: 200px; */
   padding: 5px;
   cursor: pointer;
   transition: transform 1s ease 100ms;
