@@ -9,11 +9,11 @@ import passport from "passport";
 import url from "./connection";
 import Users from "./models";
 import local from "./strategies";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app: Application = express();
-
 // Connecting to the database
-
 mongoose.connect(
   url,
   {
@@ -37,9 +37,18 @@ mongoose.connection.once("open", () => {
 
 app.use(express.json());
 app.use(cookieParser("anything"));
+
 app.use(
   bodyParser.urlencoded({
     extended: true,
+  })
+);
+
+app.use(
+  session({
+    secret: "anything",
+    resave: false,
+    saveUninitialized: false,
   })
 );
 app.use(
@@ -48,29 +57,18 @@ app.use(
     credentials: true,
   })
 );
-app.use(
-  session({
-    secret: "anything",
-    // resave: true,
-    // saveUninitialized: true,
-    // cookie: {
-    //   maxAge: 3600000 * 24 * 7,
-    //   sameSite: false,
-    // },
-  })
-);
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(local);
 
 passport.serializeUser((user: any, callback: any) => {
-  callback(null, user._id);
+  return callback(null, user._id);
 });
 
 passport.deserializeUser((id: string, callback: any) => {
-  console.log(id);
+  console.log("line 75", id);
   Users.findById(id, (error: Error, user: any) => {
-    callback(error, user);
+    return callback(error, user);
   });
 });
 
@@ -82,8 +80,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/user", (req, res, next) => {
-  console.log(req.user);
-  res.status(200).send(req.user);
+  console.log("Line 89", req.user);
+  res.status(200).send({
+    username: "username",
+  });
 });
 
 app.get("/logout", (req, res) => {
@@ -123,10 +123,15 @@ app.post("/register", (req, res, next) => {
 });
 app.post("/login", (req, res, next) => {
   const { username, password } = req.body;
-  console.log(req.user);
+  console.log("line 130", req.user);
   passport.authenticate(
     "local",
-    { session: true },
+    {
+      session: true,
+      successFlash: true,
+      successRedirect: "/",
+      failureRedirect: "/",
+    },
     (error: Error, user: any, info: any) => {
       if (!user) {
         res.status(200).send("Invalid username(email) or password.");
