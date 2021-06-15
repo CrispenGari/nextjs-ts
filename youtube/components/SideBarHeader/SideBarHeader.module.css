@@ -4,6 +4,9 @@
   padding: 5px;
   position: relative;
   display: flex;
+  position: sticky;
+  background: white;
+  top: 0;
 }
 .sidebar__header img {
   width: 170px !important;
