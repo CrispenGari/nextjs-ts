@@ -7,13 +7,17 @@ import bcrypt from "bcryptjs";
 import bodyParser from "body-parser";
 import passport from "passport";
 import url from "./connection";
+import localStrategy from "passport-local";
 import Users from "./models";
 import local from "./strategies";
 import dotenv from "dotenv";
 
 dotenv.config();
+
 const app: Application = express();
+
 // Connecting to the database
+
 mongoose.connect(
   url,
   {
@@ -34,23 +38,25 @@ mongoose.connection.once("open", () => {
   console.log("MongoDB connection open.");
 });
 // midlewares
-
-app.use(express.json());
-app.use(cookieParser("anything"));
-
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
-
 app.use(
   session({
     secret: "anything",
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24 * 7,
+    },
   })
 );
+app.use(express.json());
+app.use(cookieParser("anything"));
+
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+
 app.use(
   cors({
     origin: "http://localhost:3000",
@@ -59,18 +65,48 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-passport.use(local);
 
 passport.serializeUser((user: any, callback: any) => {
-  return callback(null, user._id);
+  callback(null, user._id);
 });
 
 passport.deserializeUser((id: string, callback: any) => {
-  console.log("line 75", id);
   Users.findById(id, (error: Error, user: any) => {
-    return callback(error, user);
+    callback(error, user);
   });
 });
+passport.use(
+  new localStrategy.Strategy(
+    async (username: string, password: string, done) => {
+      await Users.findOne(
+        { username: username },
+        async (error: Error, doc: any) => {
+          if (error) {
+            throw error;
+          }
+          if (!doc) {
+            return done(null, false, { message: "The user does not exists." });
+          } else {
+            await bcrypt.compare(
+              password,
+              doc.password,
+              (error: Error, res: boolean) => {
+                if (error) {
+                  throw error;
+                }
+                if (res) {
+                  return done(null, doc);
+                } else {
+                  return done(null, false, { message: "Invalid password" });
+                }
+              }
+            );
+          }
+        }
+      );
+    }
+  )
+);
 
 app.get("/", (req, res) => {
   res.status(200).send({
@@ -80,10 +116,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/user", (req, res, next) => {
-  console.log("Line 89", req.user);
-  res.status(200).send({
-    username: "username",
-  });
+  console.log(req.isAuthenticated());
+  res.status(200).send(req.user);
 });
 
 app.get("/logout", (req, res) => {
@@ -122,17 +156,11 @@ app.post("/register", (req, res, next) => {
   });
 });
 app.post("/login", (req, res, next) => {
-  const { username, password } = req.body;
-  console.log("line 130", req.user);
   passport.authenticate(
     "local",
-    {
-      session: true,
-      successFlash: true,
-      successRedirect: "/",
-      failureRedirect: "/",
-    },
+    { session: true },
     (error: Error, user: any, info: any) => {
+      console.log(info);
       if (!user) {
         res.status(200).send("Invalid username(email) or password.");
       } else {

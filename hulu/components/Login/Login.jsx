@@ -10,14 +10,13 @@ const Login = ({ setHasAccount }) => {
     e.preventDefault();
     (async () =>
       await Axios({
-        url: "http://localhost:3001/login",
-        withCredentials: true,
         method: "POST",
         data: {
           username: email,
-
           password: password,
         },
+        url: "http://localhost:3001/login",
+        withCredentials: true,
       })
         .then((res) => {
           console.log(res);

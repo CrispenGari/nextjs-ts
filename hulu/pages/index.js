@@ -9,7 +9,7 @@ const Home = ({ data, user }) => {
   console.log("user", user);
   return (
     <div className={styles.app}>
-      {user ? (
+      {!user ? (
         <Auth />
       ) : (
         <>
@@ -23,9 +23,9 @@ const Home = ({ data, user }) => {
 };
 
 export default Home;
-
 export async function getServerSideProps(context) {
   const category = Object.keys(context.query)[0];
+  console.log("Wait...");
   const { data } = await Axios({
     method: "GET",
     url: category
@@ -35,10 +35,11 @@ export async function getServerSideProps(context) {
 
   let user;
   await Axios({
-    withCredentials: true,
     method: "GET",
     url: "http://localhost:3001/user",
+    withCredentials: true,
   }).then((res) => {
+    console.log(res);
     user = res.data;
   });
 

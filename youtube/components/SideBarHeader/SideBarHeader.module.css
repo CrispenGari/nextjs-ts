@@ -1,0 +1,22 @@
+.sidebar__header {
+  overflow-y: hidden;
+  height: 50px !important;
+  padding: 5px;
+  position: relative;
+  display: flex;
+}
+.sidebar__header img {
+  width: 170px !important;
+  padding: 10px;
+  -webkit-user-drag: none !important;
+  cursor: pointer;
+  object-fit: contain;
+  /* margin-top: -18%; */
+}
+.sidebar__menu__button {
+  margin-right: 5px;
+}
+.sidebar__menu__icon {
+  color: #4e4e4e !important;
+  font-size: 20px !important;
+}
