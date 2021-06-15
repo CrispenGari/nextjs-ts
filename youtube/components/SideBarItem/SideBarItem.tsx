@@ -1,5 +1,14 @@
 import styles from "./SideBarItem.module.css";
-const SideBarItem = ({ Icon, title, active, setActive }) => {
+import { Avatar } from "@material-ui/core";
+const SideBarItem = ({ Icon, title, active, setActive, isSubscription }) => {
+  if (isSubscription) {
+    return (
+      <div className={styles.sidebar__item__subscription}>
+        <Avatar className={styles.sidebar__avatar} alt="subscription" />
+        <p>{title}</p>
+      </div>
+    );
+  }
   return (
     <div
       onClick={() => setActive(title)}

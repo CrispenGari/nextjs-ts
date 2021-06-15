@@ -28,16 +28,19 @@ const Sidebar = () => {
         title="Home"
         setActive={setActive}
         active={active}
+        isSubscription={false}
       />
       <SideBarItem
         setActive={setActive}
         active={active}
         Icon={MdExplore}
         title="Explore"
+        isSubscription={false}
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={MdSubscriptions}
         title="Subscriptions"
       />
@@ -45,58 +48,81 @@ const Sidebar = () => {
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={MdVideoLibrary}
         title="Library"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={MdHistory}
         title="History"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={MdWatchLater}
         title="Watch Later"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={RiVideoLine}
         title="Your Videos"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={AiFillLike}
         title="Liked Videos"
       />
       <hr />
       <h1>Subscriptions</h1>
+      <SideBarItem
+        setActive={setActive}
+        active={active}
+        isSubscription={true}
+        Icon={AiFillLike}
+        title="Comic Pastor"
+      />
+      <SideBarItem
+        setActive={setActive}
+        active={active}
+        isSubscription={true}
+        Icon={AiFillLike}
+        title="Dj Keem"
+      />
       <hr />
       <h1>More from YouTube</h1>
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={IoLogoYoutube}
         title="YouTube Premium"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={SiYoutubegaming}
         title="Gaming"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={CgMediaLive}
         title="Live"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={RiVideoLine}
         title="Sport"
       />
@@ -104,24 +130,28 @@ const Sidebar = () => {
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={MdSettings}
         title="Settings"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={AiFillFlag}
         title="Report history"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={MdHelp}
         title="Help"
       />
       <SideBarItem
         setActive={setActive}
         active={active}
+        isSubscription={false}
         Icon={MdFeedback}
         title="Send feedback"
       />

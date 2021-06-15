@@ -4,6 +4,12 @@
   align-items: center;
   cursor: pointer;
 }
+.sidebar__item__subscription {
+  display: flex;
+  padding: 5px 5px 5px 30px;
+  align-items: center;
+  cursor: pointer;
+}
 .sidebar__item__active {
   background: #d9d9d9;
   display: flex;
@@ -15,16 +21,22 @@
   color: red !important;
 }
 .sidebar__item > p,
-.sidebar__item__active > p {
+.sidebar__item__active > p,
+.sidebar__item__subscription > p {
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 10px;
+  font-size: 14px !important;
+  margin-left: 5px;
+  color: #606060;
 }
 .sidebar__icon {
   font-size: 23px;
   color: #606060;
 }
 
-.sidebar__item:hover {
+.sidebar__item:hover, .sidebar__item__subscription:hover {
   background: #f9f9f9;
+}
+.sidebar__avatar {
+  width: 25px !important;
+  height: 25px !important;
 }
