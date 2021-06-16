@@ -1,6 +1,20 @@
 .app {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
   display: flex;
+  max-height: 100vh;
+  overflow-y: hidden;
+  max-width: 100vw !important;
 }
+.app::-webkit-scrollbar {
+  display: none;
+}
+/* .app::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app::-webkit-scrollbar-thumb {
+  background-color: #606060;
+  border-radius: 999px;
+} */

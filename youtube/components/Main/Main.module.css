@@ -1,4 +1,14 @@
 .main {
   background: #f9f9f9;
   flex: 0.8;
+  width: 100%;
+  max-width: 100% !important;
+}
+.main::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
+  .main {
+    flex: 1;
+  }
 }

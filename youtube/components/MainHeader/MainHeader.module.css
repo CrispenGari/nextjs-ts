@@ -1,11 +1,10 @@
 .main__header {
   background: white;
-  /* width: 100%; */
+  width: 100%;
   display: flex;
   z-index: 10;
-  max-width: 88%;
   position: sticky;
-  top: 0;
+  top: 0 !important;
   border-bottom: 1px solid lightgray;
   flex-direction: column;
 }
@@ -13,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 15px 15px 10%;
+  padding: 15px 15px 15px 35px;
   height: 70px;
   border-bottom: 1px solid lightgray;
 }
@@ -64,8 +63,8 @@
   color: #606060;
 }
 .main__header__avatar {
-  width: 35px !important;
-  height: 35px !important;
+  width: 32px !important;
+  height: 32px !important;
   cursor: pointer !important;
 }
 .main__header__top__left__search > input:focus {
@@ -73,7 +72,7 @@
 }
 .main__header__top__left__search__icon {
   cursor: pointer;
-  font-size: 20px !important;
+  font-size: 17px !important;
   color: #606060;
 }
 
@@ -97,23 +96,18 @@
   white-space: nowrap;
 }
 .main__header__bottom__center {
-  width: 100% !important;
+  width: 200px !important;
   display: flex;
   align-items: center;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
-.main__header__bottom__center::-webkit-scrollbar {
-  display: none;
 }
 .main__header__bottom__right {
   position: absolute;
-  right: 10px;
+  right: 0px;
   z-index: 10;
   cursor: pointer;
   background: white;
-  width: 15px;
   height: 80%;
+  padding-right: 20px;
 }
 .main__header__bottom__left {
   position: absolute;
@@ -131,4 +125,52 @@
 .main__header__bottom__center > p:first-of-type {
   background: black !important;
   color: white;
+}
+.main__header__top > img {
+  width: 100px !important;
+  padding: 10px;
+  -webkit-user-drag: none !important;
+  cursor: pointer;
+  object-fit: contain;
+  margin-left: -30px;
+  display: none !important;
+}
+.main__header__top__left__search_small {
+  display: none;
+  margin-left: 50% !important;
+}
+.main__header__top__left__search_small
+  > .main__header__top__left__search__icon {
+  font-size: 25px !important;
+}
+.main__header__top__nav__button {
+  display: none !important;
+}
+@media only screen and (max-width: 1200px) {
+  .main__header__top > img {
+    display: flex !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main__header__top__left__search_small {
+    display: flex;
+  }
+  .main__header__top__left__search {
+    display: none;
+  }
+  .main__header__top__left {
+    width: fit-content;
+  }
+  .main__header__top__nav__button {
+    display: flex !important;
+    margin: 0 !important;
+  }
+  .main__header__top > img {
+    width: 180px;
+    margin: 0 10px !important;
+  }
+  .main__header__top__nav__button__icon {
+    font-size: 20px !important;
+    color: #606060 !important;
+  }
 }

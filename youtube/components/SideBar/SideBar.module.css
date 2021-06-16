@@ -1,6 +1,12 @@
 .sidebar {
   flex: 0.2 !important;
   user-select: none;
+  height: 100% !important;
+  overflow-y: scroll;
+  min-width: 250px;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
 }
 .sidebar > hr {
   margin: 5px 0px;
@@ -30,4 +36,20 @@
 .sidebar p:last-child {
   font-size: 12px;
   color: #606060;
+}
+@media only screen and (max-width: 1200px) {
+  .sidebar {
+    max-width: 60px;
+    min-width: fit-content !important;
+  }
+  .sidebar > h1,
+  .sidebar > hr,
+  .sidebar > p {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
 }

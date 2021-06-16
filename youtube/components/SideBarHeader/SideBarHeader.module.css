@@ -15,7 +15,6 @@
   -webkit-user-drag: none !important;
   cursor: pointer;
   object-fit: contain;
-  /* margin-top: -18%; */
 }
 .sidebar__menu__button {
   margin-right: 5px;
@@ -23,4 +22,12 @@
 .sidebar__menu__icon {
   color: #4e4e4e !important;
   font-size: 20px !important;
+}
+@media only screen and (max-width: 1200px) {
+  .sidebar__header img {
+    display: none;
+  }
+  .sidebar__header {
+    width: fit-content;
+  }
 }
