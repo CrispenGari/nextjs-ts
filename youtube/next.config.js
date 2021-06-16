@@ -6,7 +6,12 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ["brandslogos.com", "i.pinimg.com", "www.google.com"],
+    domains: [
+      "brandslogos.com",
+      "i.pinimg.com",
+      "www.google.com",
+      "i.ytimg.com",
+    ],
   },
 };
 // https://i.pinimg.com/originals/69/5d/27/695d2754b3a1f8fff3f7884e660eda5f.png

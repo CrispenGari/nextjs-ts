@@ -3,6 +3,8 @@
   flex: 0.8;
   width: 100%;
   max-width: 100% !important;
+  display: flex;
+  flex-direction: column;
 }
 .main::-webkit-scrollbar {
   display: none;

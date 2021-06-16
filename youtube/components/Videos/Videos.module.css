@@ -1,0 +1,18 @@
+.videos {
+  /* padding: 10px; */
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.videos::-webkit-scrollbar {
+  width: 8px;
+}
+
+.videos::-webkit-scrollbar-thumb {
+  background-color: #606060;
+  border-radius: 999px;
+}
