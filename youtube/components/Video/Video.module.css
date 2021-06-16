@@ -10,7 +10,7 @@
 
 .video__bottom {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 5px;
 }
 .video__bottom__details {

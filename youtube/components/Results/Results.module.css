@@ -9,8 +9,38 @@
 .results::-webkit-scrollbar {
   display: none;
 }
+.results__icon {
+  margin-right: 10px;
+}
+.results__main {
+  padding: 40px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.results__main > h1 {
+  text-transform: uppercase;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  padding: 5px 5px 5px 0px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #606060;
+}
 @media only screen and (max-width: 1200px) {
   .results {
     flex: 1;
   }
+  .results__main {
+    padding: 2px;
+  }
+}
+
+.results__main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.results__main::-webkit-scrollbar-thumb {
+  background-color: #606060;
+  border-radius: 999px;
 }
