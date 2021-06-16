@@ -5,7 +5,15 @@ import { IoApps } from "react-icons/io5";
 import { Avatar, IconButton } from "@material-ui/core";
 import { MdChevronRight, MdChevronLeft } from "react-icons/md";
 import { GrMenu } from "react-icons/gr";
+import { useState } from "react";
+import router from "next/router";
 const MainHeader = () => {
+  const [query, setQuery] = useState("");
+
+  const search = (e) => {
+    e.preventDefault();
+    router.push(`search?search_query=${query}`);
+  };
   return (
     <div className={styles.main__header}>
       <div className={styles.main__header__top}>
@@ -18,12 +26,16 @@ const MainHeader = () => {
         />
         <div className={styles.main__header__top__left}>
           <div className={styles.main__header__top__left__search}>
-            <input placeholder="Search" />
-            <div>
+            <input
+              placeholder="Search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button type="submit" onClick={search}>
               <IoMdSearch
                 className={styles.main__header__top__left__search__icon}
               />
-            </div>
+            </button>
           </div>
           <div className={styles.main__header__top__left__search_small}>
             <IoMdSearch

@@ -1,0 +1,16 @@
+.results {
+  background: #f9f9f9;
+  flex: 0.8;
+  width: 100%;
+  max-width: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+.results::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
+  .results {
+    flex: 1;
+  }
+}

@@ -6,14 +6,14 @@ const Videos = () => {
   console.log(data.items);
   return (
     <div className={styles.videos}>
-      {Array(10)
-        .fill(null)
-        .map((_, index) => (
-          <Video key={index} />
-        ))}
+      {data.items.map((video, index) => (
+        <Video key={index} video={video} />
+      ))}
     </div>
   );
 };
+
+// https://www.googleapis.com/youtube/v3/search?q=hello&key=AIzaSyB6hlT13melSfOZcvTnkXil-R4m5WvHPP4
 
 export default Videos;
 
