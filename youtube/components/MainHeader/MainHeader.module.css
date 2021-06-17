@@ -146,6 +146,22 @@
   > .main__header__top__left__search__icon {
   font-size: 25px !important;
 }
+.main__header__button {
+  color: #065fd4;
+  border: 1px solid #065fd4;
+  background: white;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+.main__header__button__icon {
+  color: #065fd4;
+  font-size: 25px !important;
+  margin-right: 5px;
+}
 .main__header__top__nav__button {
   display: none !important;
 }

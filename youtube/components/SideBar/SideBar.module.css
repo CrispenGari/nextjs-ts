@@ -3,7 +3,7 @@
   user-select: none;
   height: 100% !important;
   overflow-y: scroll;
-  min-width: 250px;
+  min-width: 200px;
 }
 .sidebar::-webkit-scrollbar {
   display: none;

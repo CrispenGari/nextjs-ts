@@ -7,8 +7,12 @@ import { MdChevronRight, MdChevronLeft } from "react-icons/md";
 import { GrMenu } from "react-icons/gr";
 import { useState } from "react";
 import router from "next/router";
+import { IoPersonCircleSharp } from "react-icons/io5";
+import { useSession, signIn } from "next-auth/client";
 const MainHeader = () => {
   const [query, setQuery] = useState("");
+
+  const [session, loading] = useSession();
 
   const search = (e) => {
     e.preventDefault();
@@ -53,10 +57,29 @@ const MainHeader = () => {
           <IconButton className={styles.main__header__top__button}>
             <IoApps className={styles.main__header__top__icon} />
           </IconButton>
-          <IconButton className={styles.main__header__top__button}>
-            <IoMdNotifications className={styles.main__header__top__icon} />
-          </IconButton>
-          <Avatar className={styles.main__header__avatar} />
+
+          {!session ? (
+            <button
+              className={styles.main__header__button}
+              onClick={() => signIn()}
+            >
+              <IoPersonCircleSharp
+                className={styles.main__header__button__icon}
+              />{" "}
+              SIGN IN
+            </button>
+          ) : (
+            <>
+              <IconButton className={styles.main__header__top__button}>
+                <IoMdNotifications className={styles.main__header__top__icon} />
+              </IconButton>
+              <Avatar
+                className={styles.main__header__avatar}
+                alt={session.user.name}
+                src={session.user.image}
+              />
+            </>
+          )}
         </div>
       </div>
       <div className={styles.main__header__bottom}>
