@@ -1,6 +1,6 @@
 import styles from "./HeaderItem.module.css";
 import { useRouter } from "next/router";
-const HeaderItem = ({ Icon, title }) => {
+const HeaderItem = ({ Icon, title, setVideoId }) => {
   const router = useRouter();
   return (
     <div
@@ -11,6 +11,7 @@ const HeaderItem = ({ Icon, title }) => {
         } else if (title === "Trending") {
           router.push(`/?trending`);
         }
+        setVideoId("");
       }}
     >
       <Icon className={styles.headerItem__icon} />

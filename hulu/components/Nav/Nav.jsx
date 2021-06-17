@@ -1,8 +1,7 @@
 import styles from "./Nav.module.css";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import endpoints from "../../utils/endpoints";
-const Nav = () => {
+const Nav = ({ setVideoId }) => {
   const router = useRouter();
   const query = Object.keys(router.query)[0];
   return (
@@ -13,7 +12,10 @@ const Nav = () => {
               className={
                 query?.toLowerCase() === key.toLowerCase() ? styles.active : ""
               }
-              onClick={() => router.push(`?${key.toLowerCase()}`)}
+              onClick={() => {
+                router.push(`?${key.toLowerCase()}`);
+                setVideoId("");
+              }}
               key={key}
             >
               {title}
@@ -22,7 +24,10 @@ const Nav = () => {
         : Object.entries(endpoints).map(([key, { url, title }], index) => (
             <h1
               className={index === 0 ? styles.active : ""}
-              onClick={() => router.push(`?${key.toLowerCase()}`)}
+              onClick={() => {
+                router.push(`?${key.toLowerCase()}`);
+                setVideoId("");
+              }}
               key={key}
             >
               {title}

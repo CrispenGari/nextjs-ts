@@ -43,3 +43,10 @@
   opacity: 0.9;
   transform: scale(1.02);
 }
+
+@media only screen and (max-width: 425px) {
+  .movie {
+    width: 90%;
+    margin: auto;
+  }
+}

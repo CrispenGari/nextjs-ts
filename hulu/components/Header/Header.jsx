@@ -11,15 +11,27 @@ import { BiSearch } from "react-icons/bi";
 import { RiHomeLine, RiFoldersLine } from "react-icons/ri";
 import { BsLightning, BsFolderCheck } from "react-icons/bs";
 
-const Header = () => {
+const Header = ({ setVideoId }) => {
   return (
     <div className={styles.header}>
       <div className={styles.header__left}>
-        <HeaderItem Icon={RiHomeLine} title={"Home"} />
-        <HeaderItem Icon={BsLightning} title={"Trending"} />
-        <HeaderItem Icon={BsFolderCheck} title={"Collections"} />
-        <HeaderItem Icon={BiSearch} title={"Search"} />
-        <HeaderItem Icon={IoPersonOutline} title={"Account"} />
+        <HeaderItem Icon={RiHomeLine} title={"Home"} setVideoId={setVideoId} />
+        <HeaderItem
+          Icon={BsLightning}
+          title={"Trending"}
+          setVideoId={setVideoId}
+        />
+        <HeaderItem
+          Icon={BsFolderCheck}
+          title={"Collections"}
+          setVideoId={setVideoId}
+        />
+        <HeaderItem Icon={BiSearch} title={"Search"} setVideoId={setVideoId} />
+        <HeaderItem
+          Icon={IoPersonOutline}
+          title={"Account"}
+          setVideoId={setVideoId}
+        />
       </div>
       <div className={styles.header__right}>
         <h1>hulu</h1>

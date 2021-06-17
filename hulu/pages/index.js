@@ -5,17 +5,22 @@ import Movies from "../components/Movies/Movies";
 import Auth from "../components/Auth/Auth";
 import endpoints from "../utils/endpoints";
 import Axios from "axios";
+import { useState } from "react";
 const Home = ({ data, user }) => {
-  console.log("user", user);
+  const [videoId, setVideoId] = useState("");
   return (
     <div className={styles.app}>
-      {!user ? (
+      {user ? (
         <Auth />
       ) : (
         <>
-          <Header />
-          <Nav />
-          <Movies movies={data?.results} />
+          <Header setVideoId={setVideoId} />
+          <Nav setVideoId={setVideoId} />
+          <Movies
+            movies={data?.results}
+            setVideoId={setVideoId}
+            videoId={videoId}
+          />
         </>
       )}
     </div>

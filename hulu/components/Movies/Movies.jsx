@@ -4,9 +4,9 @@ const { publicRuntimeConfig } = getConfig();
 import Movie from "../Movie/Movie";
 import YouTube from "react-youtube";
 import { useState } from "react";
+import FlipMove from "react-flip-move";
 import Axios from "axios";
-const Movies = ({ movies }) => {
-  const [videoId, setVideoId] = useState("");
+const Movies = ({ movies, videoId, setVideoId }) => {
   const playMovie = (movie) => {
     setVideoId("");
     let movie_name =
@@ -42,11 +42,11 @@ const Movies = ({ movies }) => {
           className={style.movie__player}
         />
       )}
-      <div className={style.movies}>
+      <FlipMove className={style.movies}>
         {movies?.map((movie, index) => (
           <Movie movie={movie} key={index} playMovie={playMovie} />
         ))}
-      </div>
+      </FlipMove>
     </>
   );
 };

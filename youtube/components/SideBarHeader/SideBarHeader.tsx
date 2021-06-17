@@ -1,10 +1,10 @@
 import styles from "./SideBarHeader.module.css";
 import { IconButton, Avatar } from "@material-ui/core";
 import { GrMenu } from "react-icons/gr";
-
+import router from "next/router";
 const SideBarHeader = () => {
   return (
-    <div className={styles.sidebar__header}>
+    <div className={styles.sidebar__header} onClick={() => router.push("/")}>
       <IconButton className={styles.sidebar__menu__button}>
         <GrMenu className={styles.sidebar__menu__icon} />
       </IconButton>

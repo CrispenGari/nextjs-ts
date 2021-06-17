@@ -1,10 +1,11 @@
 import styles from "./Movie.module.css";
 import { BiLike } from "react-icons/bi";
-const Movie = ({ movie, playMovie }) => {
+import { forwardRef } from "react";
+const Movie = forwardRef(({ movie, playMovie }, ref) => {
   const base_url = "https://image.tmdb.org/t/p/original/";
   return (
     movie?.backdrop_path && (
-      <div className={styles.movie} onClick={() => playMovie(movie)}>
+      <div ref={ref} className={styles.movie} onClick={() => playMovie(movie)}>
         <img
           layout="responsive"
           alt="Movie"
@@ -27,6 +28,6 @@ const Movie = ({ movie, playMovie }) => {
       </div>
     )
   );
-};
+});
 
 export default Movie;
