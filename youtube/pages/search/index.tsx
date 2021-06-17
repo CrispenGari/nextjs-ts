@@ -24,6 +24,4 @@ export async function getServerSideProps(context) {
       data,
     },
   };
-
-  // https://www.googleapis.com/youtube/v3/search?key=AIzaSyB6hlT13melSfOZcvTnkXil-R4m5WvHPP4&type=video&maxResults=50&part=snippet&q=hello
 }
