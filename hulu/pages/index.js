@@ -6,11 +6,13 @@ import Auth from "../components/Auth/Auth";
 import endpoints from "../utils/endpoints";
 import Axios from "axios";
 import { useState } from "react";
-const Home = ({ data, user }) => {
+import { useSession } from "next-auth/client";
+const Home = ({ data }) => {
   const [videoId, setVideoId] = useState("");
+  const [session, loading] = useSession();
   return (
     <div className={styles.app}>
-      {user ? (
+      {!session ? (
         <Auth />
       ) : (
         <>
@@ -30,7 +32,6 @@ const Home = ({ data, user }) => {
 export default Home;
 export async function getServerSideProps(context) {
   const category = Object.keys(context.query)[0];
-  console.log("Wait...");
   const { data } = await Axios({
     method: "GET",
     url: category
@@ -38,20 +39,9 @@ export async function getServerSideProps(context) {
       : `https://api.themoviedb.org/3${endpoints["recommended"]?.url}`,
   });
 
-  let user;
-  await Axios({
-    method: "GET",
-    url: "http://localhost:3001/user",
-    withCredentials: true,
-  }).then((res) => {
-    console.log(res);
-    user = res.data;
-  });
-
   return {
     props: {
       data,
-      user,
     },
   };
 }

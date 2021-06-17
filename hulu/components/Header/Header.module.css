@@ -5,7 +5,43 @@
   align-items: flex-start;
   justify-content: space-between;
 }
-
+.header__right {
+  display: flex;
+  align-items: flex-start;
+}
+.header__right > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.header__right > div > p {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: gray;
+  user-select: none;
+}
+.header__right > div > button {
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  background: black;
+  /* width: 50px; */
+  margin: 5px;
+  padding: 2px 20px;
+  border-radius: 5px;
+}
+.header__right__avatar {
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer !important;
+  margin-right: 5px !important;
+  border: 2px lime solid !important;
+}
 .header__right > h1 {
   font-size: 30px;
   user-select: none;
@@ -19,6 +55,13 @@
 }
 
 @media only screen and (max-width: 425px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) {
   .header {
     flex-direction: column;
     justify-content: center;

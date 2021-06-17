@@ -10,8 +10,11 @@ import { IoPersonOutline } from "react-icons/io5";
 import { BiSearch } from "react-icons/bi";
 import { RiHomeLine, RiFoldersLine } from "react-icons/ri";
 import { BsLightning, BsFolderCheck } from "react-icons/bs";
+import { signOut, useSession } from "next-auth/client";
+import { Avatar } from "@material-ui/core";
 
 const Header = ({ setVideoId }) => {
+  const [{ user }, loading] = useSession();
   return (
     <div className={styles.header}>
       <div className={styles.header__left}>
@@ -34,10 +37,24 @@ const Header = ({ setVideoId }) => {
         />
       </div>
       <div className={styles.header__right}>
+        <div>
+          {loading ? (
+            <p>loading...</p>
+          ) : (
+            <p>
+              <Avatar
+                alt={user?.name}
+                src={user?.image}
+                className={styles.header__right__avatar}
+              />
+              {user?.name}
+            </p>
+          )}
+          <button onClick={() => signOut()}>Sign Out</button>
+        </div>
         <h1>hulu</h1>
       </div>
     </div>
   );
 };
-
 export default Header;

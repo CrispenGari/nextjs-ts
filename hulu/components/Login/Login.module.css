@@ -52,11 +52,18 @@
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: 5px;
   font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .login button:active {
   background: lightseagreen;
   color: white;
+}
+
+.login__google__icon {
+  margin-left: 10px;
 }

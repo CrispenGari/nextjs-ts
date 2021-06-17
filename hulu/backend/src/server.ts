@@ -75,38 +75,7 @@ passport.deserializeUser((id: string, callback: any) => {
     callback(error, user);
   });
 });
-passport.use(
-  new localStrategy.Strategy(
-    async (username: string, password: string, done) => {
-      await Users.findOne(
-        { username: username },
-        async (error: Error, doc: any) => {
-          if (error) {
-            throw error;
-          }
-          if (!doc) {
-            return done(null, false, { message: "The user does not exists." });
-          } else {
-            await bcrypt.compare(
-              password,
-              doc.password,
-              (error: Error, res: boolean) => {
-                if (error) {
-                  throw error;
-                }
-                if (res) {
-                  return done(null, doc);
-                } else {
-                  return done(null, false, { message: "Invalid password" });
-                }
-              }
-            );
-          }
-        }
-      );
-    }
-  )
-);
+passport.use(local);
 
 app.get("/", (req, res) => {
   res.status(200).send({
@@ -116,7 +85,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/user", (req, res, next) => {
-  console.log(req.isAuthenticated());
   res.status(200).send(req.user);
 });
 
@@ -135,6 +103,9 @@ app.post("/register", (req, res, next) => {
   }
   if (username < 5) {
     return res.status(200).send("Username must have at least 5 characters.");
+  }
+  if (!email) {
+    return res.status(200).send("Email address is required.");
   }
   Users.findOne({ username: username }, async (error: Error, doc: any) => {
     if (error) {
@@ -160,7 +131,6 @@ app.post("/login", (req, res, next) => {
     "local",
     { session: true },
     (error: Error, user: any, info: any) => {
-      console.log(info);
       if (!user) {
         res.status(200).send("Invalid username(email) or password.");
       } else {

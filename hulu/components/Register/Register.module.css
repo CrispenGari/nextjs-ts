@@ -10,15 +10,7 @@
   margin: 50px auto 0px auto;
   justify-content: center;
 }
-.register > input {
-  width: 90%;
-  margin: 10px;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border: 1px solid lightseagreen;
-  border-radius: 5px;
-}
+
 .register h1 {
   width: 100%;
   text-align: center;
@@ -52,11 +44,17 @@
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: 5px;
   font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .register button:active {
   background: lightseagreen;
   color: white;
+}
+.register__google__icon {
+  margin-left: 10px;
 }
