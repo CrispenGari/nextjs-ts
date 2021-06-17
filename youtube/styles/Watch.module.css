@@ -6,7 +6,18 @@
   max-height: 100vh;
   overflow-y: hidden;
   max-width: 100vw !important;
+  background: #f6f6f6;
+  flex-direction: column;
 }
 .watch::-webkit-scrollbar {
   display: none;
+}
+.watch > div:last-child {
+  flex: 1;
+  background: black;
+  display: flex;
+  flex-direction: column;
+}
+.watch__main {
+  height: 80vh !important;
 }

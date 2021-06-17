@@ -21,8 +21,6 @@
 .video__bottom__details > h1 {
   font-size: 14px;
   font-weight: 500;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .video__bottom__details > p {
   color: #606060;

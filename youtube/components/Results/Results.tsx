@@ -3,7 +3,9 @@ import styles from "./Results.module.css";
 import { VscSettings } from "react-icons/vsc";
 import SearchResult from "../SearchResult/SearchResult";
 import data from "../../videos.json";
-const Results = () => {
+import axios from "axios";
+const Results = ({ data }) => {
+  //console.log(data);
   return (
     <div className={styles.results}>
       <SearchHeader />
@@ -11,20 +13,9 @@ const Results = () => {
         <h1>
           <VscSettings className={styles.results__icon} /> FILTERS
         </h1>
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
-        <SearchResult video={data?.items[0]} />
+        {data?.map((video, index) => (
+          <SearchResult video={video} key={index} />
+        ))}
       </div>
     </div>
   );

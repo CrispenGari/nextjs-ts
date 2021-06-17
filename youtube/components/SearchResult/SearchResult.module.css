@@ -8,7 +8,7 @@
   width: 500px;
 }
 .search__result > img {
-  width: 250px;
+  height: 200px !important;
   -webkit-user-drag: none;
   object-fit: contain;
 }
@@ -20,6 +20,12 @@
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
+  /* width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 600px; */
 }
 .search__result__details > p:first-of-type {
   color: #606060;
