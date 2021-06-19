@@ -1,0 +1,22 @@
+.login__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+}
+.login__header img {
+  cursor: pointer;
+  width: 180px;
+  object-fit: contain;
+}
+.login__header button {
+  background: #e50914;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+}
