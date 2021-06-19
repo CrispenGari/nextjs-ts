@@ -3,6 +3,7 @@ import styles from "../styles/Login.module.css";
 
 import LoginCenter from "../components/LoginCenter/LoginCenter";
 
+import Columns from "../components/Columns";
 const login = () => {
   return (
     <div className={styles.login}>
@@ -11,6 +12,9 @@ const login = () => {
         <div className={styles.login__container__center}>
           <LoginCenter />
         </div>
+      </div>
+      <div className={styles.login__columns}>
+        <Columns />
       </div>
     </div>
   );

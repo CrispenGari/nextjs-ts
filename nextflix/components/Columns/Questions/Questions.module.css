@@ -1,0 +1,30 @@
+.questions {
+  width: 100%;
+  display: flex;
+  color: white;
+  background: black;
+  user-select: none;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 50px;
+}
+.questions__main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+.questions__main h1 {
+  line-height: 55px;
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .questions h1 {
+    font-size: 26px;
+    line-height: unset;
+  }
+}

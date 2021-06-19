@@ -1,0 +1,87 @@
+.column__d {
+  width: 100%;
+  display: flex;
+  color: white;
+  background: black;
+  user-select: none;
+  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+  margin-bottom: 10px;
+}
+.column__d__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 50px 10px 50px 50px;
+  flex: 1;
+  min-width: 500px;
+}
+.column__d__left h1 {
+  line-height: 55px;
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.column__d__left h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+.column__d__right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.column__d__right__card {
+  position: absolute;
+  border: 2px solid gray;
+  padding: 5px 10px;
+  display: flex;
+  height: 60px;
+  background: black;
+  border-radius: 5px;
+  margin-left: -30px;
+  width: 300px;
+  width: 1;
+  top: 70%;
+  justify-content: space-between;
+  align-items: center;
+}
+.column__d__right__card div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+.column__d__right__card div p {
+  color: #003a7a;
+  font-size: 12px;
+  font-weight: 400;
+}
+.column__d__right__card div h3 {
+  font-weight: 600;
+  font-size: 14px;
+}
+.column__d__right__card img {
+  height: 100%;
+}
+
+.column__d__right > img {
+  width: 500px;
+  -webkit-user-drag: none;
+}
+.column__d__card__icon__blue {
+  color: #003a7a;
+}
+
+@media only screen and (max-width: 600px) {
+  .column__d__left h1 {
+    font-size: 26px;
+    line-height: unset;
+  }
+  .column__d__left h2 {
+    font-size: 18px;
+  }
+}

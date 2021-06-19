@@ -6,6 +6,7 @@
   overflow-y: scroll;
   padding: 0;
   margin: 0;
+  background-repeat: no-repeat !important;
 }
 .login__container {
   width: 100%;
@@ -23,4 +24,8 @@
 
 .login::-webkit-scrollbar {
   display: none;
+}
+
+.login__columns {
+  background: #222222 !important;
 }
