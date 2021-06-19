@@ -12,6 +12,15 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
+.login__container__center {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  height: 80vh;
+  padding: 10px;
+  width: 100%;
+}
+
 .login::-webkit-scrollbar {
   display: none;
 }
