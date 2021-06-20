@@ -1,7 +1,7 @@
 import styles from "./LoginCard.module.css";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
-const LoginCard = () => {
+const LoginCard = ({ setCardToMount, cardToMount }) => {
   return (
     <div className={styles.login__card}>
       <h1>Sign In</h1>
@@ -25,7 +25,8 @@ const LoginCard = () => {
         Login with Facebook
       </button>
       <p>
-        New to Netflix? <span>Sign up now</span>
+        New to Netflix?{" "}
+        <span onClick={() => setCardToMount("createAccount")}>Sign up now</span>
       </p>
       <p>
         This page is protected by Google reCAPTCHA to ensure you're not a bot.{" "}

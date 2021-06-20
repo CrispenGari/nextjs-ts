@@ -1,5 +1,5 @@
 import styles from "./LoginHeader.module.css";
-const LoginHeader = () => {
+const LoginHeader = ({ setCardToMount, cardToMount }) => {
   return (
     <div className={styles.login__header}>
       <img
@@ -7,7 +7,9 @@ const LoginHeader = () => {
         alt="logo"
         draggable={false}
       />
-      <button>Sign In</button>
+      {cardToMount !== "login" && (
+        <button onClick={() => setCardToMount("login")}>Sign In</button>
+      )}
     </div>
   );
 };
