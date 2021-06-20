@@ -1,0 +1,93 @@
+.browse__add__profile {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  width: 100%;
+  max-width: 600px;
+}
+.browse__add__profile__center {
+  padding: 20px 0;
+  margin: 10px 0;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.browse__add__profile h1 {
+  line-height: 65px;
+  font-size: 55px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.browse__add__profile > p {
+  color: #666666;
+  line-height: 21px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.browse__add__profile__buttons > button:first-of-type {
+  background: white;
+  color: black;
+  margin-right: 10px;
+}
+.browse__add__profile__buttons > button:first-of-type:hover {
+  color: white;
+  background: #e50914;
+}
+.browse__add__profile__center img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.browse__add__profile__center input[type="text"] {
+  flex: 1;
+  margin: 0px 10px;
+  outline: none;
+  border: none;
+  background: #666666;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+}
+.browse__add__profile__center label {
+  color: white;
+  cursor: pointer;
+  line-height: 21px;
+  font-size: 18px;
+}
+.browse__add__profile__buttons {
+  margin-top: 20px;
+}
+.browse__add__profile__center label > input[type="checkbox"] {
+  margin-right: 10px;
+  box-shadow: 0 0 0 5px #333333;
+}
+
+@media only screen and (max-width: 600px) {
+  .browse__add__profile {
+    max-width: 500px;
+    padding: 40px;
+  }
+  .browse__add__profile h1 {
+    line-height: 48px;
+    font-size: 40px;
+  }
+  .browse__add__profile > p,
+  .browse__add__profile__center label {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .browse__add__profile__buttons > button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .browse__add__profile__center input[type="text"] {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+  .browse__add__profile__center img {
+    width: 80px;
+    height: 80px;
+  }
+}
