@@ -2,11 +2,12 @@
   width: 100%;
   max-width: 500px;
   color: white;
-  padding: 50px 40px;
+  padding: 50px 40px 20px 40px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.8);
+  margin-top: -20px;
 }
 .login__card form {
   display: flex;

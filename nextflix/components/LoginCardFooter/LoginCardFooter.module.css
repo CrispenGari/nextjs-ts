@@ -1,26 +1,26 @@
-.footer {
+.login__card__footer {
+  border-top: 2px solid lightgrey;
   background: black;
   color: #303030;
   font-weight: 400;
-  padding: 50px 20px 30px 20px;
+  padding: 40px 20px 30px 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   user-select: none;
 }
-.footer__main {
-  width: 100%;
-  margin: 0px auto;
+.login__card__footer__main {
   max-width: 900px;
 }
-.footer__center {
+
+.login__card__footer__container {
   display: flex;
   flex-wrap: wrap;
   margin: 20px 10px 20px 0px;
   justify-content: space-between;
 }
-.footer__center > a {
+.login__card__footer__container a {
   white-space: nowrap;
   width: 150px;
   margin: 5px 0px;
@@ -33,14 +33,14 @@
   font-style: normal;
   font-size: 13px;
 }
-.footer__center > a :hover {
+.login__card__footer__container a:hover {
   text-decoration: underline #757575 !important;
 }
-.footer__top {
+
+.login__card__footer h4 {
   color: #757575 !important;
   font-size: 16px;
-}
-.footer__bottom p {
-  color: #757575 !important;
-  font-size: 13px;
+  display: flex;
+  flex: 1;
+  width: 100%;
 }

@@ -7,6 +7,7 @@ import Footer from "../components/LoginFooter/Footer";
 import Columns from "../components/Columns";
 import LoginCard from "../components/LoginCard/LoginCard";
 import { useState } from "react";
+import LoginCardFooter from "../components/LoginCardFooter/LoginCardFooter";
 
 const login = () => {
   const [cardToMount, setCardToMount] = useState("login");
@@ -27,10 +28,11 @@ const login = () => {
           <LoginCard />
         </div>
       </div>
-      <div className={styles.login__columns}>
+      {/* <div className={styles.login__columns}>
         <Columns />
       </div>
-      <Footer />
+      <Footer /> */}
+      <LoginCardFooter />
     </div>
   );
 };

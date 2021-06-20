@@ -13,13 +13,11 @@ const Footer = () => {
           <a>Privacy</a>
           <a>Contact Us</a>
           <a>Netflix Originals</a>
-
           <a>Help Center</a>
           <a>Investor Relations</a>
           <a>Ways to Watch</a>
           <a>Cookie Preferences</a>
           <a>Speed Test</a>
-
           <a>Account</a>
           <a>Jobs</a>
           <a>Terms of Use</a>
