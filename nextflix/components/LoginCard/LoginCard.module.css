@@ -1,0 +1,145 @@
+.login__card {
+  width: 100%;
+  max-width: 500px;
+  color: white;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.8);
+}
+.login__card form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.login__card h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  user-select: none;
+  color: white;
+}
+.login__card form > input {
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 15px; /*rgb(51,51,51)*/
+  outline: none;
+  border: none;
+  width: 90%;
+  background: #333333;
+}
+.login__card form button {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background: #e50914;
+  outline: none;
+  border: none;
+  margin: 30px auto 10px auto;
+  width: 90%;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 15px;
+}
+.login__card form p {
+  display: flex;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+  width: 90%;
+}
+.login__card form p label {
+  display: flex;
+  /* white-space: nowrap; */
+  align-items: center;
+  width: 150px;
+  cursor: pointer;
+  justify-content: flex-start;
+  color: #b3b3b3;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.login__card form p label > input {
+  background: #333333;
+  padding: 40px;
+  margin-right: 10px;
+  color: #333333;
+}
+.login__card form p a {
+  color: #b3b3b3;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login__card form p a:hover {
+  text-decoration: #b3b3b3 underline;
+}
+.login__card form p label > input[type="checkbox"] {
+  box-shadow: 0 0 0 3px #333333;
+}
+
+.login__card form p label > input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px #333333;
+}
+.login__card > button {
+  background: inherit !important;
+  border: none;
+  color: white;
+  outline: none;
+  width: fit-content;
+  cursor: pointer;
+  margin: 20px;
+  color: #737373;
+  font-weight: 500;
+  line-height: 13px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+.login__facebook__icon {
+  color: #3b579d !important;
+  margin-right: 10px;
+  background: white !important;
+  font-size: 20px !important;
+  padding: -10px !important;
+}
+.login__card > p:first-of-type {
+  font-size: 16px;
+  color: #737373;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+.login__card > p:first-of-type > span {
+  color: white;
+}
+.login__card > p:first-of-type > span:hover {
+  text-decoration: underline white;
+  cursor: pointer;
+}
+.login__card > p:last-child {
+  color: #737373;
+  font-size: 13px;
+  padding: 10px 20px;
+}
+.login__card > p:last-child > a {
+  color: #0071dc;
+}
+.login__card > p:last-child > a:hover {
+  text-decoration: underline #0071dc;
+}
+@media only screen and (max-width: 600px) {
+  .login__card {
+    width: 100%;
+    max-width: unset;
+  }
+  .login__card form > input,
+  .login__card form > button {
+    width: 100%;
+  }
+}

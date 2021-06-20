@@ -5,13 +5,26 @@ import LoginCenter from "../components/LoginCenter/LoginCenter";
 
 import Footer from "../components/LoginFooter/Footer";
 import Columns from "../components/Columns";
+import LoginCard from "../components/LoginCard/LoginCard";
+import { useState } from "react";
+
 const login = () => {
+  const [cardToMount, setCardToMount] = useState("login");
   return (
-    <div className={styles.login}>
+    <div
+      className={cardToMount === "login" ? styles.login__small : styles.login}
+    >
       <div className={styles.login__container}>
         <LoginHeader />
-        <div className={styles.login__container__center}>
-          <LoginCenter />
+        <div
+          className={
+            cardToMount === "login"
+              ? styles.login__container__center__small
+              : styles.login__container__center
+          }
+        >
+          {/* <LoginCenter /> */}
+          <LoginCard />
         </div>
       </div>
       <div className={styles.login__columns}>
