@@ -53,7 +53,7 @@ const Questions = () => {
         {questions?.map((question, index) => (
           <Question question={question} key={index} />
         ))}
-
+        <div className={styles.question__main__break}></div>
         <LoginCenter withHeaders={false} />
       </div>
     </div>

@@ -3,6 +3,7 @@ import styles from "../styles/Login.module.css";
 
 import LoginCenter from "../components/LoginCenter/LoginCenter";
 
+import Footer from "../components/LoginFooter/Footer";
 import Columns from "../components/Columns";
 const login = () => {
   return (
@@ -16,9 +17,9 @@ const login = () => {
       <div className={styles.login__columns}>
         <Columns />
       </div>
+      <Footer />
     </div>
   );
 };
 
 export default login;
-// https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png

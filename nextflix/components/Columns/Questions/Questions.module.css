@@ -22,6 +22,9 @@
   text-align: center !important;
 }
 
+div.question__main__break {
+  height: 80px;
+}
 @media only screen and (max-width: 600px) {
   .questions h1 {
     font-size: 26px;
