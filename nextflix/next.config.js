@@ -10,7 +10,12 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ["assets.nflxext.com", "assets.stickpng.com"],
+    domains: [
+      "pbs.twimg.com",
+      "assets.nflxext.com",
+      "assets.stickpng.com",
+      "mir-s3-cdn-cf.behance.net",
+    ],
   },
 };
 // http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png

@@ -1,0 +1,16 @@
+.browse__header {
+  display: flex;
+  padding: 10px 50px;
+}
+.browse__header img {
+  width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .browse__header img {
+    width: 70px;
+  }
+  .browse__header {
+    padding: 10px 20px;
+  }
+}

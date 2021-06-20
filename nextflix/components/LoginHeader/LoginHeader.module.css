@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 30px;
+  position: sticky;
+  top: 0;
 }
 .login__header img {
   cursor: pointer;
