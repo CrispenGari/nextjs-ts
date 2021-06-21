@@ -1,4 +1,4 @@
-.column__c {
+.row__a {
   width: 100%;
   display: flex;
   color: white;
@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
-.column__c__left {
+.row__a__left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,33 +17,33 @@
   flex: 1;
   min-width: 500px;
 }
-.column__c__left h1 {
+.row__a__left h1 {
   line-height: 55px;
   font-weight: 700;
   font-size: 50px;
   margin-bottom: 10px;
 }
-.column__c__left h2 {
+.row__a__left h2 {
   font-size: 26px;
   font-weight: 400;
 }
-.column__c__right {
+.row__a__right {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.column__c__right > img {
+.row__a__right > img {
   width: 500px;
   -webkit-user-drag: none;
 }
 
 @media only screen and (max-width: 600px) {
-  .column__c__left h1 {
+  .row__a__left h1 {
     font-size: 26px;
   }
-  .column__c__left h2 {
+  .row__a__left h2 {
     font-size: 18px;
   }
 }

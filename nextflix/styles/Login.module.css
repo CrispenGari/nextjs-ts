@@ -28,7 +28,7 @@
   display: none;
 }
 
-.login__columns {
+.login__rows {
   background: #222222 !important;
   padding-bottom: 5px;
 }

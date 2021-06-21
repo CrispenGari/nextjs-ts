@@ -4,14 +4,14 @@ import styles from "../styles/Login.module.css";
 import LoginCenter from "../components/LoginCenter/LoginCenter";
 
 import Footer from "../components/LoginFooter/Footer";
-import Columns from "../components/Columns";
+import Rows from "../components/Rows";
 import LoginCard from "../components/LoginCard/LoginCard";
 import { useState } from "react";
 import LoginCardFooter from "../components/LoginCardFooter/LoginCardFooter";
 import React from "react";
 
 const login = () => {
-  const [cardToMount, setCardToMount] = useState("login");
+  const [cardToMount, setCardToMount] = useState("createAccount");
   return (
     <div
       className={cardToMount === "login" ? styles.login__small : styles.login}
@@ -40,8 +40,8 @@ const login = () => {
       </div>
       {cardToMount !== "login" ? (
         <React.Fragment>
-          <div className={styles.login__columns}>
-            <Columns />
+          <div className={styles.login__rows}>
+            <Rows />
           </div>
           <Footer />
         </React.Fragment>

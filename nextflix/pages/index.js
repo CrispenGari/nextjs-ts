@@ -1,7 +1,9 @@
 import styles from "../styles/Home.module.css";
+
+import HomeHeader from "../components/HomeHeader/HomeHeader";
 const Home = () => (
-  <div>
-    <h1>Home</h1>
+  <div className={styles.home}>
+    <HomeHeader />
   </div>
 );
 
