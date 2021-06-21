@@ -1,0 +1,103 @@
+.movie__card__small {
+  width: 260px;
+  cursor: pointer;
+  margin-right: 15px;
+  background: #141414;
+  border-radius: 5px;
+  transition: transform 1s ease-in-out;
+  height: fit-content;
+}
+.movie__card__small__image__wrapper {
+  width: 260px;
+  background: rgba(0, 0, 0, 0.6);
+  height: 150px;
+}
+.movie__card__small__image__wrapper img {
+  width: 260px;
+  border-radius: 5px;
+  height: 100%;
+}
+.movie__card__small__info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  display: none;
+}
+
+.movie__card__small__info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.movie__card__small__info__top > div {
+  display: flex;
+  align-items: center;
+}
+.movie__card__small__info__top > div > p {
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+  display: grid;
+  place-items: center;
+}
+.movie__card__small__info__icon {
+  font-size: 30px;
+}
+.movie__card__small__info__top > div > p > .movie__card__small__info__icon {
+  font-size: unset;
+}
+.movie__card__small__info__center {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #46d369;
+  padding: 0 10px;
+}
+.movie__card__small__info__bottom {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+.movie__card__small__info__bottom > span {
+  margin: 0px 10px;
+}
+.movie__card__small:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  z-index: 10;
+}
+.movie__card__small:hover > .movie__card__small__info {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .movie__card__small {
+    width: 200px;
+  }
+  .movie__card__small__image__wrapper,
+  .movie__card__small__image__wrapper > img {
+    width: 200px;
+    height: 100px;
+  }
+  .movie__card__small__info__center,
+  .movie__card__small__info__bottom {
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .movie__card__small__info__top > div > p {
+    width: 25px;
+    height: 25px;
+  }
+  .movie__card__small__info__top {
+    font-size: 13px;
+  }
+  .movie__card__small__info__icon {
+    font-size: 25px;
+  }
+}
