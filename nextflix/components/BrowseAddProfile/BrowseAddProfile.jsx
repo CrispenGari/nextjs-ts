@@ -1,6 +1,6 @@
 import styles from "./BrowseAddProfile.module.css";
 
-const BrowseAddProfile = () => {
+const BrowseAddProfile = ({ setCreateProfile }) => {
   return (
     <div className={styles.browse__add__profile}>
       <h1>Browse Add</h1>
@@ -15,7 +15,7 @@ const BrowseAddProfile = () => {
       </div>
       <div className={styles.browse__add__profile__buttons}>
         <button>Continue</button>
-        <button>Cancel</button>
+        <button onClick={() => setCreateProfile(false)}>Cancel</button>
       </div>
     </div>
   );

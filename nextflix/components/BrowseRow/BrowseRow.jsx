@@ -1,4 +1,4 @@
-import styles from "./BrowseColumn.module.css";
+import styles from "./BrowseRow.module.css";
 import { IoAddCircle } from "react-icons/io5";
 import BrowseProfile from "../BrowseProfile/BrowseProfile";
 
@@ -14,10 +14,10 @@ const profiles = [
       "https://pbs.twimg.com/profile_images/1198967349312991232/lXeo3AMv_400x400.png",
   },
 ];
-const BrowseColumn = () => {
+const BrowseRow = ({ setCreateProfile }) => {
   return (
-    <div className={styles.browse__column}>
-      <div className={styles.browse__column__profiles}>
+    <div className={styles.browse__row}>
+      <div className={styles.browse__row__profiles}>
         {profiles?.map((profile, index) => (
           <BrowseProfile profile={profile} key={index} />
         ))}
@@ -25,9 +25,12 @@ const BrowseColumn = () => {
           <BrowseProfile profile={profile} key={index} />
         ))}
       </div>
-      <div className={styles.browse__column___add__profile__container}>
-        <div className={styles.browse__column___add__profile}>
-          <IoAddCircle className={styles.browse__column___add__profile__icon} />
+      <div
+        className={styles.browse__row___add__profile__container}
+        onClick={() => setCreateProfile(true)}
+      >
+        <div className={styles.browse__row___add__profile}>
+          <IoAddCircle className={styles.browse__row___add__profile__icon} />
         </div>
         <p>Add Profile</p>
       </div>
@@ -35,4 +38,4 @@ const BrowseColumn = () => {
   );
 };
 
-export default BrowseColumn;
+export default BrowseRow;
