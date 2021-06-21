@@ -8,7 +8,15 @@
   user-select: none;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .home::-webkit-scrollbar {
   display: none;
+}
+.home__container {
+  background-size: cover;
+  background-image: url("https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABeK5Put5OaE98dHGdKeDp0WdAlDHS0x1erpoB2M4lf1lOikY9NxYb2eDYYHIplnziz91N7N0sT8JZagD9kqRCbpSZ5Nb.jpg?r=4ed");
+}
+.home__container__header__banner {
+  background-color: rgba(0, 0, 0, 0.5);
 }

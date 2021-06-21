@@ -6,8 +6,12 @@ import HomeBarner from "../components/HomeBarner/HomeBarner";
 import HomeRows from "../components/HomeRows/HomeRows";
 const Home = () => (
   <div className={styles.home}>
-    <HomeHeader />
-    <HomeBarner />
+    <div className={styles.home__container}>
+      <div className={styles.home__container__header__banner}>
+        <HomeHeader />
+        <HomeBarner />
+      </div>
+    </div>
     <HomeRows />
     <HomeFooter />
   </div>
