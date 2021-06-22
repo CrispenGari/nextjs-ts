@@ -1,11 +1,9 @@
 import styles from "./RowB.module.css";
-
 import MovieCardSmall from "../../MovieCardSmall/MovieCardSmall";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { useRef } from "react";
-const RowB = () => {
+const RowB = ({ movies, title }) => {
   const movieContainerRef = useRef(null);
-
   const scrollRight = () => {
     movieContainerRef.current.scrollBy({
       top: 0,
@@ -22,15 +20,11 @@ const RowB = () => {
   };
   return (
     <div className={styles.row__b__rows}>
-      <h1>Suggestions</h1>
+      <h1>{title}</h1>
       <div className={styles.row__b__rows__movies} ref={movieContainerRef}>
-        <MovieCardSmall />
-        <MovieCardSmall />
-        <MovieCardSmall />
-        <MovieCardSmall />
-        <MovieCardSmall />
-        <MovieCardSmall />
-        <MovieCardSmall />
+        {movies?.map((movie, index) => (
+          <MovieCardSmall key={index} movie={movie} />
+        ))}
       </div>
       <div className={styles.row__b__rows__nav__left}>
         <BsChevronLeft

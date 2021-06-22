@@ -1,12 +1,12 @@
 import RowA from "./RowA/RowA";
 import RowB from "./RowB/RowB";
-const Index = () => {
+const Index = ({ data, home_rows_data }) => {
   return (
     <>
-      <RowA />
-      <RowB />
-      <RowB />
-      <RowB />
+      <RowA data={data} />
+      {home_rows_data?.map(({ data, title }, index) => (
+        <RowB key={index} movies={data} title={title} />
+      ))}
     </>
   );
 };

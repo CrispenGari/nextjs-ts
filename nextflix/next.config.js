@@ -18,6 +18,7 @@ module.exports = {
       "occ-0-2794-2219.1.nflxso.net",
       "phantom-marca.unidadeditorial.es",
       "www.comingsoon.net",
+      "image.tmdb.org",
     ],
   },
 };

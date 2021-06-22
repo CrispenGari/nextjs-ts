@@ -2,12 +2,13 @@ import styles from "./MovieCardBig.module.css";
 import { GoPlay } from "react-icons/go";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { MdAddCircleOutline } from "react-icons/md";
-const MovieCardBig = () => {
+const MovieCardBig = ({ movie }) => {
+  const image_base_url = "https://image.tmdb.org/t/p/original/";
   return (
     <div className={styles.movie__card__big}>
       <div className={styles.movie__card__big__image__cover}>
         <img
-          src="https://phantom-marca.unidadeditorial.es/befa972b82331a2578b529ac9b5afc99/resize/1320/f/jpg/assets/multimedia/imagenes/2021/05/14/16210291347884.jpg"
+          src={`${image_base_url}${movie?.poster_path}`}
           loading="lazy"
           alt="movie"
         />
@@ -24,8 +25,8 @@ const MovieCardBig = () => {
             className={styles.movie__card__big__bottom__icon}
           />
         </div>
-        <h1>Movie name</h1>
-        <h2>Season</h2>
+        <h1>{movie?.original_title || movie?.title}</h1>
+        <h2>{movie?.release_date}</h2>
         <div className={styles.movie__card__big__bottom__bottom}></div>
       </div>
     </div>
