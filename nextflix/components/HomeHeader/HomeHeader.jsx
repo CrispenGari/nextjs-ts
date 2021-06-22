@@ -14,6 +14,7 @@ const HomeHeader = () => {
           draggable={false}
           src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
           alt="logo"
+          loading="lazy"
         />
         <h2>Home</h2>
         <h2>Tv Shows</h2>

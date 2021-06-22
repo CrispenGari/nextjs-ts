@@ -12,6 +12,7 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 17px;
+  z-index: 90 !important;
 }
 .row__b__rows__movies {
   display: flex;
@@ -22,16 +23,65 @@
 .row__b__rows__movies::-webkit-scrollbar {
   display: none;
 }
+.row__b__rows__nav__right,
+.row__b__rows__nav__left {
+  height: 100%;
+  z-index: 80;
+  position: absolute;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  top: 0;
+  max-height: 260px;
+}
+.row__b__rows__nav__left {
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5)
+  );
+  display: none;
+}
+.row__b__rows__nav__right {
+  right: 0;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5)
+  );
+  display: none;
+}
+
+.row__b__rows__nav__btn__right {
+  font-weight: 800;
+  font-size: 40px;
+  cursor: pointer;
+}
+.row__b__rows:hover > .row__b__rows__nav__right {
+  display: grid;
+}
+.row__b__rows:hover > .row__b__rows__nav__left {
+  display: grid;
+}
 @media only screen and (max-width: 600px) {
   .row__b__rows {
     margin-bottom: 10px;
     margin-left: 10px;
   }
 }
+@media only screen and (max-width: 600px) {
+  .row__b__rows__nav__btn__right {
+    font-size: 20px;
+  }
+  .row__b__rows__nav__right,
+  .row__b__rows__nav__left {
+    max-height: 200px;
+  }
+}
 
 @media only screen and (max-width: 1000px) {
-  .row__b__rows {
-    margin-bottom: 15px;
-    margin-left: 15px;
+  .row__b__rows__nav__btn__right {
+    font-size: 30px;
   }
 }
