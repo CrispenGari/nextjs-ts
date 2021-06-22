@@ -1,17 +1,39 @@
 import styles from "./HomeBarner.module.css";
 import { ImPlay3 } from "react-icons/im";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-const HomeBarner = () => {
+import { useEffect, useState } from "react";
+
+const HomeBarner = ({ movies }) => {
+  const [movieIndex, setMovieIndex] = useState(0);
+  const image_base_url = "https://image.tmdb.org/t/p/original/";
+  let index = 0;
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (index === movies.length) {
+        setMovieIndex(0);
+      } else {
+        setMovieIndex(index);
+      }
+      index += 1;
+    }, 5000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
   return (
-    <div className={styles.home__barner}>
+    <div
+      className={styles.home__barner}
+      style={{
+        backgroundImage: `url("${image_base_url}${movies[movieIndex]?.backdrop_path}")`,
+        backgroundRepeat: "repeat-x",
+        backgroundSize: "cover",
+      }}
+    >
       <div className={styles.home__barner__movie}>
-        <h4>Movie Name</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere
-          natus velit debitis autem explicabo magnam assumenda odit aliquam ea
-          veritatis voluptatem nobis in, sapiente eius quisquam molestias
-          tenetur. Repudiandae!
-        </p>
+        <h4>
+          {movies[movieIndex]?.title || movies[movieIndex]?.original_title}
+        </h4>
+        <p>{movies[movieIndex]?.overview}</p>
         <div className={styles.home__barner__buttons}>
           <button>
             <ImPlay3 className={styles.home__button__icon} />

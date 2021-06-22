@@ -43,6 +43,11 @@ const endpoints = {
     url: `/movie/now_playing?api_key=${process.env.API_KEY}`,
     title: "now playing".toLowerCase(),
   },
+
+  discover: {
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=99`,
+    title: "Discover".toLowerCase(),
+  },
   //   search: {
   //     url: `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=`,
   //     title: "search",

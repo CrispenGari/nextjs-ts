@@ -6,7 +6,6 @@ import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
 import { useState } from "react";
 const MovieCardSmall = ({ movie }) => {
   const image_base_url = "https://image.tmdb.org/t/p/original/";
-
   const [viewInfo, setViewInfo] = useState(false);
   if (movie?.backdrop_path) {
     return (

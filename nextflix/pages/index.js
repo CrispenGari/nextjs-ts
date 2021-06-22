@@ -11,9 +11,10 @@ const Home = ({ discover, home_rows_data }) => {
       <div className={styles.home__container}>
         <div className={styles.home__container__header__banner}>
           <HomeHeader />
-          <HomeBarner />
+          <HomeBarner movies={discover?.results} />
         </div>
       </div>
+      {/* <MovieInfo /> */}
       <HomeRows data={discover?.results} home_rows_data={home_rows_data} />
       <HomeFooter />
     </div>
@@ -26,7 +27,7 @@ export async function getServerSideProps(context) {
   const base_url = "https://api.themoviedb.org/3";
   const discover = await Axios({
     method: "GET",
-    url: "https://api.themoviedb.org/3/discover/movie?api_key=5ac0ad7d8ec61646a043f5cda245e111&with_genres=99",
+    url: `${base_url}${endpoints.discover.url}`,
   });
 
   const now_playing = await Axios({
