@@ -6,9 +6,15 @@ import Rows from "../components/Rows";
 import LoginCard from "../components/LoginCard/LoginCard";
 import { useState } from "react";
 import LoginCardFooter from "../components/LoginCardFooter/LoginCardFooter";
+import LoginCreateAccount from "../components/LoginCreateAccount";
 import React from "react";
 const login = () => {
   const [cardToMount, setCardToMount] = useState("createAccount");
+  const [createAccountEmail, setCreateAccountEmail] = useState();
+
+  if (cardToMount === "createAccount") {
+    return <LoginCreateAccount />;
+  }
   return (
     <div
       className={cardToMount === "login" ? styles.login__small : styles.login}
