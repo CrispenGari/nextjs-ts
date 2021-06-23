@@ -2,6 +2,7 @@ import styles from "./index.module.css";
 import StepA from "./StepA/StepA";
 import StepB from "./StepB/StepB";
 import StepC from "./StepC/StepC";
+import LoginCreateAccountFooter from "./LoginCreateAccountFooter/LoginCreateAccountFooter";
 import { useState } from "react";
 const Index = () => {
   const [stepToMount, setStepToMount] = useState("A");
@@ -25,6 +26,7 @@ const Index = () => {
           <StepC />
         )}
       </div>
+      <LoginCreateAccountFooter />
     </div>
   );
 };

@@ -1,2 +1,96 @@
 .step__a {
+  width: 100%;
+  max-width: 450px;
+  margin: 10px auto;
+  padding: 10px;
+  user-select: none;
+}
+
+.step__a > h2 {
+  line-height: 19px;
+  color: #333333;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.step__a > h2 span {
+  font-weight: bold;
+}
+.step__a > h1 {
+  color: #333333;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.step__a > h3 {
+  font-size: 19px;
+  color: #333333;
+  font-weight: 400;
+}
+.step__a form {
+  display: flex;
+  flex-direction: column;
+}
+.step__a form button {
+  font-size: 17px;
+  line-height: 19px;
+  background: #e50914;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-weight: 400;
+}
+.step__a form label {
+  font-size: 17px;
+  line-height: 19px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin: 10px 0;
+  width: 100%;
+}
+.step__a form label input[type="checkbox"] {
+  margin-right: 8px;
+}
+.step__a__input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  padding: 10px 10px;
+  margin-top: 15px;
+  height: 55px;
+}
+.step__a__input > span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8c8c8c;
+  display: none;
+}
+.step__a__input > input {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 5px 0;
+  outline: none;
+  border: none;
+  background: inherit;
+  flex: 1;
+}
+.step__a form > p {
+  font-size: 13px;
+  color: red;
+}
+.step__a__input:focus-within {
+  padding: 5px 10px;
+}
+.step__a__input:focus-within > span {
+  display: flex;
 }

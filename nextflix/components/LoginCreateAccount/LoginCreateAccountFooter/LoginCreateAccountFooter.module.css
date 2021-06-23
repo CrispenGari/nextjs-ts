@@ -1,0 +1,46 @@
+.login__create__account__footer {
+  display: flex;
+  flex-direction: column;
+  background: #f3f3f3;
+  width: 100%;
+  padding: 20px;
+}
+.login__create__account__footer__center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin: 10px auto;
+  user-select: none;
+}
+.login__create__account__footer__center h1 {
+  font-size: 16px;
+  color: #757575;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.login__create__account__footer__center > div > span {
+  font-size: 13px;
+  color: #757575;
+  cursor: pointer;
+  width: 250px;
+  margin: 10px 0px;
+}
+.login__create__account__footer__center > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.login__create__account__footer__center > div > span:hover {
+  text-decoration: underline #757575;
+}
+
+@media only screen and (max-width: 600px) {
+  .login__create__account__footer__center {
+    padding: 10px;
+  }
+  .login__create__account__footer__center > div > span {
+    margin: 5px 0;
+    width: 50%;
+  }
+}
