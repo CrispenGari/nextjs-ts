@@ -1,6 +1,6 @@
 import styles from "./StepB.module.css";
 import { IoCheckmarkCircleOutline, IoCheckmarkSharp } from "react-icons/io5";
-const StepB = () => {
+const StepB = ({ setStepToMount }) => {
   return (
     <div className={styles.step__b}>
       <IoCheckmarkCircleOutline className={styles.step__b__icon__a} />
@@ -20,7 +20,7 @@ const StepB = () => {
         <IoCheckmarkSharp className={styles.step__b__icon__b} />
         Unlimited viewing on all your devices.
       </h3>
-      <button>Skip</button>
+      <button onClick={() => setStepToMount("C")}>Skip</button>
     </div>
   );
 };

@@ -45,7 +45,7 @@ const questions = [
     ],
   },
 ];
-const Questions = () => {
+const Questions = ({ setCreateAccountEmail, setCardToMount }) => {
   return (
     <div className={styles.questions}>
       <div className={styles.questions__main}>
@@ -54,7 +54,11 @@ const Questions = () => {
           <Question question={question} key={index} />
         ))}
         <div className={styles.question__main__break}></div>
-        <LoginCenter withHeaders={false} />
+        <LoginCenter
+          withHeaders={false}
+          setCreateAccountEmail={setCreateAccountEmail}
+          setCardToMount={setCardToMount}
+        />
       </div>
     </div>
   );

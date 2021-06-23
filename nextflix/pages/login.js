@@ -9,11 +9,16 @@ import LoginCardFooter from "../components/LoginCardFooter/LoginCardFooter";
 import LoginCreateAccount from "../components/LoginCreateAccount";
 import React from "react";
 const login = () => {
-  const [cardToMount, setCardToMount] = useState("createAccount");
+  const [cardToMount, setCardToMount] = useState("center");
   const [createAccountEmail, setCreateAccountEmail] = useState();
 
-  if (cardToMount === "createAccount") {
-    return <LoginCreateAccount />;
+  if (cardToMount === "createAccount" && createAccountEmail) {
+    return (
+      <LoginCreateAccount
+        setCardToMount={setCardToMount}
+        createAccountEmail={createAccountEmail}
+      />
+    );
   }
   return (
     <div
@@ -32,7 +37,11 @@ const login = () => {
           }
         >
           {cardToMount !== "login" ? (
-            <LoginCenter />
+            <LoginCenter
+              setCreateAccountEmail={setCreateAccountEmail}
+              setCardToMount={setCardToMount}
+              withHeaders
+            />
           ) : (
             <LoginCard
               setCardToMount={setCardToMount}
@@ -44,7 +53,10 @@ const login = () => {
       {cardToMount !== "login" ? (
         <React.Fragment>
           <div className={styles.login__rows}>
-            <Rows />
+            <Rows
+              setCreateAccountEmail={setCreateAccountEmail}
+              setCardToMount={setCardToMount}
+            />
           </div>
           <Footer />
         </React.Fragment>

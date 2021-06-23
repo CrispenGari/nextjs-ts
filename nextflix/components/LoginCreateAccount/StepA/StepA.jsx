@@ -1,20 +1,36 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./StepA.module.css";
 
-const StepA = () => {
+const StepA = ({
+  setStepToMount,
+  createAccountEmail,
+  setPasswordToCreateAccount,
+  setEmailToCreateAccount,
+}) => {
   const [passwordError, setPasswordError] = useState("");
   const [emailError, setEmailError] = useState("");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(createAccountEmail);
   const [password, setPassword] = useState("");
-
-  const emailRef = useRef(null);
-  const passwordRef = useRef(null);
-
+  const continueToStepB = (e) => {
+    e.preventDefault();
+    const expression = new RegExp(/[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+/gim);
+    if (!emailError && !passwordError && expression.test(email)) {
+      setEmailToCreateAccount(email);
+      setPasswordToCreateAccount(password);
+      setStepToMount("B");
+    }
+  };
   useEffect(() => {
+    const expression = new RegExp(/[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+/gim);
     if (!email) {
       setEmailError("Email is required!");
     } else {
       setEmailError("");
+      if (!expression.test(email)) {
+        setEmailError("Invalid email address!");
+      } else {
+        setEmailError("");
+      }
     }
   }, [email]);
 
@@ -54,7 +70,6 @@ const StepA = () => {
         >
           <span>Email</span>
           <input
-            ref={emailRef}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
@@ -76,7 +91,6 @@ const StepA = () => {
         >
           <span>Add a password</span>
           <input
-            ref={passwordRef}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
@@ -88,7 +102,9 @@ const StepA = () => {
           <input type="checkbox" id="checkbox" />
           Please do not email me Netflix special offers.
         </label>
-        <button>Continue</button>
+        <button type="submit" onClick={continueToStepB}>
+          Continue
+        </button>
       </form>
     </div>
   );

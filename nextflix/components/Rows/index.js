@@ -4,14 +4,17 @@ import RowC from "./RowC/RowC";
 import RowD from "./RowD/RowD";
 import Questions from "./Questions/Questions";
 
-const Rows = () => {
+const Rows = ({ setCreateAccountEmail, setCardToMount }) => {
   return (
     <>
       <RowA />
       <RowB />
       <RowC />
       <RowD />
-      <Questions />
+      <Questions
+        setCreateAccountEmail={setCreateAccountEmail}
+        setCardToMount={setCardToMount}
+      />
     </>
   );
 };
