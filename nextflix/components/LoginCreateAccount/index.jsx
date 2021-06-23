@@ -5,7 +5,7 @@ import StepC from "./StepC/StepC";
 import LoginCreateAccountFooter from "./LoginCreateAccountFooter/LoginCreateAccountFooter";
 import { useState } from "react";
 const Index = () => {
-  const [stepToMount, setStepToMount] = useState("A");
+  const [stepToMount, setStepToMount] = useState("C");
   return (
     <div className={styles.index}>
       <div className={styles.index__header}>

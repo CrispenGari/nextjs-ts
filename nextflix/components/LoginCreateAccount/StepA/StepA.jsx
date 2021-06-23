@@ -74,7 +74,7 @@ const StepA = () => {
                 }
           }
         >
-          <span>Password</span>
+          <span>Add a password</span>
           <input
             ref={passwordRef}
             value={password}
