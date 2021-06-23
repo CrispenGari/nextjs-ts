@@ -4,16 +4,16 @@ const Profile = new mongoose.Schema({
     type: String,
     required: true,
   },
+  avatar: {
+    type: String,
+    required: true,
+  },
 });
 const User = new mongoose.Schema({
   email: {
     type: String,
     required: true,
   },
-  name: {
-    type: String,
-    required: true,
-  },
-  profiles: [Profile],
+  profiles: { type: [Profile], required: false },
 });
 export default mongoose.model("users", User);

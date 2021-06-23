@@ -5,16 +5,26 @@ import HomeFooter from "../components/HomeFooter/HomeFooter";
 import HomeBarner from "../components/HomeBarner/HomeBarner";
 import HomeRows from "../components/HomeRows";
 import Axios from "axios";
-const Home = ({ discover, home_rows_data }) => {
+import { useEffect, useState } from "react";
+import { auth } from "../firebase";
+import router from "next/router";
+const Home = ({ discover, home_rows_data, profile }) => {
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(async (authUser) => {
+      if (!authUser) {
+        router.replace("/login");
+      }
+    });
+    return () => unsubscribe();
+  }, [auth]);
   return (
     <div className={styles.home}>
       <div className={styles.home__container}>
         <div className={styles.home__container__header__banner}>
-          <HomeHeader />
+          <HomeHeader profile={profile} />
           <HomeBarner movies={discover?.results} />
         </div>
       </div>
-      {/* <MovieInfo /> */}
       <HomeRows data={discover?.results} home_rows_data={home_rows_data} />
       <HomeFooter />
     </div>
@@ -25,11 +35,20 @@ export default Home;
 
 export async function getServerSideProps(context) {
   const base_url = "https://api.themoviedb.org/3";
+
+  const profileName = await context?.query?.profile;
+  const userEmail = await context?.query?.email;
+
+  const { data } = await Axios({
+    url: `http://localhost:3001/profiles/${userEmail}`,
+    method: "GET",
+  });
+
+  const user = (await auth.currentUser) || null;
   const discover = await Axios({
     method: "GET",
     url: `${base_url}${endpoints.discover.url}`,
   });
-
   const now_playing = await Axios({
     method: "GET",
     url: `${base_url}${endpoints.now_playing.url}`,
@@ -110,6 +129,10 @@ export async function getServerSideProps(context) {
     props: {
       discover: discover.data,
       home_rows_data: home_rows_data,
+      user,
+      profile: data?.profiles?.filter(
+        (profile) => profile?.name?.toLowerCase() === profileName
+      )[0],
     },
   };
 }

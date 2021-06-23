@@ -31,6 +31,7 @@
   border: none;
   width: 90%;
   background: #333333;
+  color: white;
 }
 .login__card form button {
   font-size: 16px;
@@ -133,6 +134,14 @@
 }
 .login__card > p:last-child > a:hover {
   text-decoration: underline #0071dc;
+}
+.login__card__error {
+  color: red !important;
+  margin: 5px auto;
+  text-align: center !important;
+  user-select: none;
+  font-size: 13px;
+  font-weight: 400;
 }
 @media only screen and (max-width: 600px) {
   .login__card {

@@ -1,5 +1,7 @@
 import styles from "./StepC.module.css";
 import { IoCheckmarkCircleOutline, IoCheckmarkSharp } from "react-icons/io5";
+import { auth } from "../../../firebase";
+import Axios from "axios";
 const StepC = ({
   emailToCreateAccount,
   passwordToCreateAccount,
@@ -7,7 +9,22 @@ const StepC = ({
   setEmailToCreateAccount,
 }) => {
   const createNetflixAccount = () => {
-    console.log(emailToCreateAccount, passwordToCreateAccount);
+    auth
+      .createUserWithEmailAndPassword(
+        emailToCreateAccount,
+        passwordToCreateAccount
+      )
+      .then((authUser) => {
+        (async () => {
+          await Axios.post("http://localhost:3001/new/user", {
+            email: authUser.user.email?.toLocaleLowerCase(),
+          }).then(() => {
+            setPasswordToCreateAccount("");
+            setEmailToCreateAccount("");
+          });
+        })();
+      })
+      .catch((error) => console.error(error));
   };
   return (
     <div className={styles.step__c}>

@@ -1,4 +1,6 @@
 import firebase from "firebase";
+import "firebase/app";
+import "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyAKwym1CN_M2WRY2qmY0Ev1dsTPEkd47CU",
   authDomain: "netflix-next-a2766.firebaseapp.com",
@@ -15,6 +17,4 @@ const app = firebase.apps.length
 
 const auth = app.auth();
 
-export default {
-  auth,
-};
+export { auth };

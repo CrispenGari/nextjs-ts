@@ -2,28 +2,29 @@ import styles from "./BrowseRow.module.css";
 import { IoAddCircle } from "react-icons/io5";
 import BrowseProfile from "../BrowseProfile/BrowseProfile";
 
-const profiles = [
-  {
-    username: "username1",
-    avatar:
-      "https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png",
-  },
-  {
-    username: "username2",
-    avatar:
-      "https://pbs.twimg.com/profile_images/1198967349312991232/lXeo3AMv_400x400.png",
-  },
-];
-const BrowseRow = ({ setCreateProfile }) => {
+const BrowseRow = ({ setCreateProfile, profiles }) => {
   return (
     <div className={styles.browse__row}>
-      <div className={styles.browse__row__profiles}>
-        {profiles?.map((profile, index) => (
-          <BrowseProfile profile={profile} key={index} />
-        ))}
-        {profiles?.map((profile, index) => (
-          <BrowseProfile profile={profile} key={index} />
-        ))}
+      <div
+        className={styles.browse__row__profiles}
+        style={
+          profiles?.length == 0
+            ? {
+                display: "grid",
+                placeItems: "center",
+              }
+            : {
+                display: "flex",
+              }
+        }
+      >
+        {profiles?.length > 0 ? (
+          profiles?.map((profile, index) => (
+            <BrowseProfile profile={profile} key={index} />
+          ))
+        ) : (
+          <h1>No profiles for this account click Add To Create one.</h1>
+        )}
       </div>
       <div
         className={styles.browse__row___add__profile__container}

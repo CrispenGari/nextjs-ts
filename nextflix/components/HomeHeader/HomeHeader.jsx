@@ -4,9 +4,13 @@ import { IoMdNotifications } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { useEffect, useRef, useState } from "react";
-const HomeHeader = () => {
+import { auth } from "../../firebase";
+const HomeHeader = ({ profile }) => {
   const [openSearch, setOpenSearch] = useState(false);
   const searchRef = useRef(null);
+  const signOutOfNetflix = () => {
+    auth.signOut();
+  };
   return (
     <div className={styles.home__header}>
       <div className={styles.home__header__left}>
@@ -39,11 +43,8 @@ const HomeHeader = () => {
         <h2>Kids</h2>
         <IoMdNotifications className={styles.home__header__right__icon} />
 
-        <div>
-          <img
-            src="https://pbs.twimg.com/profile_images/1198967349312991232/lXeo3AMv_400x400.png"
-            alt="profile-avatar"
-          />
+        <div onClick={signOutOfNetflix} title={`logout ${profile?.name}`}>
+          <img src={profile?.avatar} alt="profile-avatar" />
           <MdArrowDropDown
             className={styles.home__header__right__icon__small}
           />

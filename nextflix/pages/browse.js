@@ -3,10 +3,14 @@ import styles from "../styles/Browse.module.css";
 import BrowseHeader from "../components/BrowseHeader/BrowseHeader";
 import BrowseRow from "../components/BrowseRow/BrowseRow";
 import BrowseAddProfile from "../components/BrowseAddProfile/BrowseAddProfile";
-import { useState } from "react";
-
-const Browse = () => {
+import { useEffect, useState } from "react";
+import Axios from "axios";
+const Browse = ({ profiles }) => {
   const [createProfile, setCreateProfile] = useState(false);
+
+  useEffect(() => {
+    setCreateProfile(false);
+  }, []);
   return (
     <div className={styles.browse}>
       <BrowseHeader />
@@ -16,7 +20,10 @@ const Browse = () => {
         ) : (
           <>
             <h1>Who's watching?</h1>
-            <BrowseRow setCreateProfile={setCreateProfile} />
+            <BrowseRow
+              profiles={profiles}
+              setCreateProfile={setCreateProfile}
+            />
             <button>Manage Profiles</button>
           </>
         )}
@@ -26,3 +33,17 @@ const Browse = () => {
 };
 
 export default Browse;
+
+export async function getServerSideProps(context) {
+  const userEmail = await context?.query?.email;
+  const { data } = await Axios({
+    url: `http://localhost:3001/profiles/${userEmail}`,
+    method: "GET",
+  });
+
+  return {
+    props: {
+      profiles: data?.profiles,
+    },
+  };
+}
