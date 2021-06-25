@@ -15,11 +15,11 @@ const HomeBarner = ({ movies }) => {
         setMovieIndex(index);
       }
       index += 1;
-    }, 5000);
+    }, 10000);
     return () => {
       clearInterval(intervalId);
     };
-  }, []);
+  }, [index]);
   return (
     <div
       className={styles.home__barner}

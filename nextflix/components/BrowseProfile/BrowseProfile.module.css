@@ -63,4 +63,7 @@
     font-size: 13px;
     padding: 5px;
   }
+  .browse__profile__edit {
+    height: 80px;
+  }
 }
