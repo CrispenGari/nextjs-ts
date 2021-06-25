@@ -17,6 +17,15 @@ const Home = ({ discover, home_rows_data, profile }) => {
     });
     return () => unsubscribe();
   }, [auth]);
+
+  useEffect(() => {
+    const profileName = router?.query?.profile;
+    const userEmail = router?.query?.email;
+    if (!userEmail && !profileName) {
+      router.replace("/login");
+    }
+  }, [router]);
+
   return (
     <div className={styles.home}>
       <div className={styles.home__container}>
@@ -39,10 +48,14 @@ export async function getServerSideProps(context) {
   const profileName = await context?.query?.profile;
   const userEmail = await context?.query?.email;
 
-  const { data } = await Axios({
-    url: `http://localhost:3001/profiles/${userEmail}`,
-    method: "GET",
-  });
+  let data;
+  if (userEmail) {
+    const res = await Axios({
+      url: `http://localhost:3001/profiles/${userEmail}`,
+      method: "GET",
+    });
+    data = res.data;
+  }
 
   const user = (await auth.currentUser) || null;
   const discover = await Axios({
@@ -124,7 +137,15 @@ export async function getServerSideProps(context) {
       data: documentaries.data?.results,
     },
   ];
-
+  if (!data?.profiles) {
+    return {
+      props: {
+        discover: discover.data,
+        home_rows_data: home_rows_data,
+        user,
+      },
+    };
+  }
   return {
     props: {
       discover: discover.data,

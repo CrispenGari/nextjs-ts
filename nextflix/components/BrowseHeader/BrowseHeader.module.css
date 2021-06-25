@@ -1,6 +1,7 @@
 .browse__header {
   display: flex;
   padding: 10px 50px;
+  cursor: pointer;
 }
 .browse__header img {
   width: 100px;

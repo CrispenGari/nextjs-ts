@@ -2,7 +2,7 @@ import styles from "./BrowseRow.module.css";
 import { IoAddCircle } from "react-icons/io5";
 import BrowseProfile from "../BrowseProfile/BrowseProfile";
 
-const BrowseRow = ({ setCreateProfile, profiles }) => {
+const BrowseRow = ({ setCreateProfile, profiles, allowEdit }) => {
   return (
     <div className={styles.browse__row}>
       <div
@@ -20,7 +20,11 @@ const BrowseRow = ({ setCreateProfile, profiles }) => {
       >
         {profiles?.length > 0 ? (
           profiles?.map((profile, index) => (
-            <BrowseProfile profile={profile} key={index} />
+            <BrowseProfile
+              profile={profile}
+              key={index}
+              allowEdit={allowEdit}
+            />
           ))
         ) : (
           <h1>No profiles for this account click Add To Create one.</h1>
