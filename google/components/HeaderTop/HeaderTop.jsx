@@ -2,11 +2,15 @@ import { Avatar, IconButton } from "@material-ui/core";
 import { Apps } from "@material-ui/icons";
 import Link from "next/link";
 import styles from "./HeaderTop.module.css";
-const HeaderTop = () => {
+const HeaderTop = ({ searchResults }) => {
   return (
     <div className={styles.header__top}>
-      <Link href="#">Gmail</Link>
-      <Link href="#">Images</Link>
+      {!searchResults && (
+        <>
+          <Link href="#">Gmail</Link>
+          <Link href="#">Images</Link>
+        </>
+      )}
       <IconButton className={styles.header__top__icon__btn}>
         <Apps />
       </IconButton>

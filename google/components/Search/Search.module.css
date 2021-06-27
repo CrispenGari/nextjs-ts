@@ -48,7 +48,7 @@
 
 .search__results {
   display: flex;
-  padding: 10px 30px;
+  padding: 20px;
 }
 .search__results img {
   width: 80px;
@@ -69,7 +69,7 @@
   outline: none;
   border: none;
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 .search__results__bar__icon {
   color: #535156;
@@ -79,12 +79,16 @@
   color: #4285f4;
   font-size: 20px;
 }
-
-@media only screen and (max-width: 600px) {
-  .search__bar {
-    width: 400px !important;
+@media only screen and (max-width: 1000px) {
+  .search__results__bar {
+    width: 300px !important;
   }
-  .search img {
-    margin-bottom: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .search__results__bar {
+    width: fit-content !important;
+  }
+  .search__results img {
+    width: 50px;
   }
 }

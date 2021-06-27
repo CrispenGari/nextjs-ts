@@ -1,0 +1,17 @@
+.results__header {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  box-shadow: 0px 2px 2px 0px lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.results__header__top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
