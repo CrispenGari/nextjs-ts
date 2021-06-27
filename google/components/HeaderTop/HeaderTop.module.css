@@ -1,0 +1,27 @@
+.header__top {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+.header__avatar {
+  width: 30px !important;
+  cursor: pointer;
+  height: 30px !important;
+  margin-left: 10px;
+}
+.header__top a {
+  color: #535156;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.header__top a:hover {
+  text-decoration: underline #535156;
+}
+.header__top__icon__btn {
+  margin: 0px 10px !important;
+  width: fit-content !important;
+  height: fit-content !important;
+  padding: 5px !important;
+}

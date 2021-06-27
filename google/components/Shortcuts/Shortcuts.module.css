@@ -1,0 +1,9 @@
+.shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin: 20px auto;
+  justify-content: space-evenly;
+}

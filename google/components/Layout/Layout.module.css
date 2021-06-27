@@ -1,0 +1,10 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.layout::-webkit-scrollbar {
+  display: none;
+}
