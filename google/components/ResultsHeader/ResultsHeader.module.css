@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  position: sticky;
+  top: 0;
+  background: white;
 }
 .results__header__top {
   display: flex;
@@ -13,5 +16,7 @@
   position: sticky;
   top: 0;
   background: white;
-  z-index: 10;
+}
+.results__header__bottom {
+  z-index: -2;
 }

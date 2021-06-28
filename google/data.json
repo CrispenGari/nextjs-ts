@@ -1,0 +1,423 @@
+{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - who is google",
+        "totalResults": "7680000000",
+        "searchTerms": "who is google",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "61c3dc9f410891a18"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - who is google",
+        "totalResults": "7680000000",
+        "searchTerms": "who is google",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "61c3dc9f410891a18"
+      }
+    ]
+  },
+  "context": {
+    "title": "Google"
+  },
+  "searchInformation": {
+    "searchTime": 0.660889,
+    "formattedSearchTime": "0.66",
+    "totalResults": "7680000000",
+    "formattedTotalResults": "7,680,000,000"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "Google Alerts - Monitor the Web for interesting new content",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e Alerts - Monitor the Web for interesting new content",
+      "link": "https://www.google.com/alerts",
+      "displayLink": "www.google.com",
+      "snippet": "Monitor the web for interesting new content. How often. As-it-happens. At most \nonce a day. At most once a week. Sources. Automatic. News. Blogs. Web. Video.",
+      "htmlSnippet": "Monitor the web for interesting new content. How often. As-it-happens. At most \u003cbr\u003e\nonce a day. At most once a week. Sources. Automatic. News. Blogs. Web. Video.",
+      "cacheId": "xf92VHvV6HgJ",
+      "formattedUrl": "https://www.google.com/alerts",
+      "htmlFormattedUrl": "https://www.\u003cb\u003egoogle\u003c/b\u003e.com/alerts",
+      "pagemap": {
+        "metatags": [
+          {
+            "viewport": "width=device-width, user-scalable=no"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Google Trends",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e Trends",
+      "link": "https://trends.google.com/trends/",
+      "displayLink": "trends.google.com",
+      "snippet": "Explore how Google data can be used to tell stories. featured. Coronavirus \nSearch Trends. This is how the world is searching for the COVID-19 pandemic. \nOops!",
+      "htmlSnippet": "Explore how \u003cb\u003eGoogle\u003c/b\u003e data can be used to tell stories. featured. Coronavirus \u003cbr\u003e\nSearch Trends. This is how the world is searching for the COVID-19 pandemic. \u003cbr\u003e\nOops!",
+      "formattedUrl": "https://trends.google.com/trends/",
+      "htmlFormattedUrl": "https://trends.\u003cb\u003egoogle\u003c/b\u003e.com/trends/",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "null",
+            "theme-color": "#4285F4",
+            "twitter:card": "summary",
+            "og:image:width": "128",
+            "twitter:site": "@GoogleTrends",
+            "og:site_name": "Google Trends",
+            "viewport": "width=device-width, minimum-scale=1, shrink-to-fit=no",
+            "og:title": "Google Trends",
+            "og:image:height": "128"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "null"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Google Doodles",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e Doodles",
+      "link": "https://www.google.com/doodles",
+      "displayLink": "www.google.com",
+      "snippet": "More doodle details · Search for 'covid vaccine near me'. More doodles. Loading \nmore... Search Google Doodles; Doodles Archive · About; Change language.",
+      "htmlSnippet": "More doodle details &middot; Search for &#39;covid vaccine near me&#39;. More doodles. Loading \u003cbr\u003e\nmore... Search \u003cb\u003eGoogle\u003c/b\u003e Doodles; Doodles Archive &middot; About; Change language.",
+      "cacheId": "qVEHjGuLeN0J",
+      "formattedUrl": "https://www.google.com/doodles",
+      "htmlFormattedUrl": "https://www.\u003cb\u003egoogle\u003c/b\u003e.com/doodles",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTRGVekVxBXmo5Nhc4LuWDxTkZsFJPWFnJhjh-H0_Lv8r9w58RFcX84eg",
+            "width": "150",
+            "height": "60"
+          }
+        ],
+        "metatags": [
+          {
+            "viewport": "width=device-width",
+            "twitter:description": "See more doodles at google.com/doodles!",
+            "og:description": "See more doodles at google.com/doodles!"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://www.google.com/logos/doodles/2021/celebrating-mary-two-axe-earley-6753651837108975-2x.png"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Google - Wikipedia",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e - Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Google",
+      "displayLink": "en.wikipedia.org",
+      "snippet": "Google LLC is an American multinational technology company that specializes in \nInternet-related services and products, which include online advertising ...",
+      "htmlSnippet": "\u003cb\u003eGoogle\u003c/b\u003e LLC is an American multinational technology company that specializes in \u003cbr\u003e\nInternet-related services and products, which include online advertising&nbsp;...",
+      "cacheId": "QmMur21MhncJ",
+      "formattedUrl": "https://en.wikipedia.org/wiki/Google",
+      "htmlFormattedUrl": "https://en.wikipedia.org/wiki/\u003cb\u003eGoogle\u003c/b\u003e",
+      "pagemap": {
+        "hcard": [
+          {
+            "url_text": "google.com",
+            "bday": "1998-09-04",
+            "fn": "Google LLC",
+            "nickname": "Google Inc. (1998–2017)",
+            "logo": "Logo since 2015[update]",
+            "label": "1600 Amphitheatre Parkway, Mountain View, California, U.S.",
+            "category": "Subsidiary (LLC)",
+            "url": "google.com"
+          }
+        ],
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTUCRjbTrwdaB91GoP0t2ZGfGuDT51VdrMQcxHgsu_PYPSd91IKfu9Huhw",
+            "width": "263",
+            "height": "192"
+          }
+        ],
+        "metatags": [
+          {
+            "referrer": "origin",
+            "og:image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/1200px-Googleplex_HQ_%28cropped%29.jpg",
+            "og:type": "website",
+            "og:title": "Google - Wikipedia"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/1200px-Googleplex_HQ_%28cropped%29.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Google Assistant, your own personal Google",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e Assistant, your own personal \u003cb\u003eGoogle\u003c/b\u003e",
+      "link": "https://assistant.google.com/",
+      "displayLink": "assistant.google.com",
+      "snippet": "Meet your Google Assistant. Ask it questions. Tell it to do things. It's your own \npersonal Google, always ready to help whenever you need it.",
+      "htmlSnippet": "Meet your \u003cb\u003eGoogle\u003c/b\u003e Assistant. Ask it questions. Tell it to do things. It&#39;s your own \u003cbr\u003e\npersonal \u003cb\u003eGoogle\u003c/b\u003e, always ready to help whenever you need it.",
+      "cacheId": "YWnaDhhtZkYJ",
+      "formattedUrl": "https://assistant.google.com/",
+      "htmlFormattedUrl": "https://assistant.\u003cb\u003egoogle\u003c/b\u003e.com/",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ_u4AK_VYi7XAOmMMmHAC9ls6EUWABef4TiINfSlhBWEjpEyASMidNcQgX",
+            "width": "310",
+            "height": "163"
+          }
+        ],
+        "website": [
+          {
+            "image": "https://lh3.googleusercontent.com/23TzU98VChGFvna_j2PPl_15Wvw8TksyLcp82Ks3mH3neptwD3vSXzQrqHrDBrLP0To6cE1WKleh7ZvWwP_2OVmPpQ=w1200",
+            "name": "Google Assistant, your own personal Google",
+            "description": "Meet your Google Assistant. Ask it questions. Tell it to do things. It's your own personal Google, always ready to help whenever you need it."
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#2b5797",
+            "og:image": "https://lh3.googleusercontent.com/23TzU98VChGFvna_j2PPl_15Wvw8TksyLcp82Ks3mH3neptwD3vSXzQrqHrDBrLP0To6cE1WKleh7ZvWwP_2OVmPpQ=w1200",
+            "theme-color": "#ffffff",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Google Assistant, your own personal Google",
+            "og:type": "website",
+            "og:site_name": "Assistant",
+            "twitter:url": "https://assistant.google.com/",
+            "og:title": "Google Assistant, your own personal Google",
+            "title": "Google Assistant, your own personal Google",
+            "og:description": "Meet your Google Assistant. Ask it questions. Tell it to do things. It's your own personal Google, always ready to help whenever you need it.",
+            "twitter:image": "https://lh3.googleusercontent.com/23TzU98VChGFvna_j2PPl_15Wvw8TksyLcp82Ks3mH3neptwD3vSXzQrqHrDBrLP0To6cE1WKleh7ZvWwP_2OVmPpQ=w880",
+            "twitter:site": "@google",
+            "viewport": "initial-scale=1, minimum-scale=1, width=device-width",
+            "twitter:description": "Meet your Google Assistant. Ask it questions. Tell it to do things. It's your own personal Google, always ready to help whenever you need it.",
+            "og:locale": "en_US",
+            "og:url": "https://assistant.google.com/"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://lh3.googleusercontent.com/23TzU98VChGFvna_j2PPl_15Wvw8TksyLcp82Ks3mH3neptwD3vSXzQrqHrDBrLP0To6cE1WKleh7ZvWwP_2OVmPpQ=w1200"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Google Fiber | Your Internet. For Everything.",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e Fiber | Your Internet. For Everything.",
+      "link": "https://fiber.google.com/",
+      "displayLink": "fiber.google.com",
+      "snippet": "Stay connected. Stay in touch. Connect your home. Discover what you can do \nwith Google Fiber gigabit internet.",
+      "htmlSnippet": "Stay connected. Stay in touch. Connect your home. Discover what you can do \u003cbr\u003e\nwith \u003cb\u003eGoogle\u003c/b\u003e Fiber gigabit internet.",
+      "cacheId": "fW8MYivadTwJ",
+      "formattedUrl": "https://fiber.google.com/",
+      "htmlFormattedUrl": "https://fiber.\u003cb\u003egoogle\u003c/b\u003e.com/",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSe7K5rpkJGjXlgetiNA4ifN5fJ3zBVJvXJMmX942G7Cm1BEtrQMagmFtk",
+            "width": "310",
+            "height": "163"
+          }
+        ],
+        "metatags": [
+          {
+            "p:domain_verify": "f1320cf79091cb16698a6bc152125db8",
+            "og:image": "https://lh3.googleusercontent.com/Vzp_3z3MWYTcACNfGi9ReBZ27uvGEFoQRt6hx11OnlIIOLIWGUJ0abBcO6B5saa3ipDH8B3UFGWxagORbxXc=s0",
+            "viewport": "width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no",
+            "og:description": "Stay connected. Stay in touch. Connect your home. Discover what you can do with Google Fiber gigabit internet."
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://lh3.googleusercontent.com/Vzp_3z3MWYTcACNfGi9ReBZ27uvGEFoQRt6hx11OnlIIOLIWGUJ0abBcO6B5saa3ipDH8B3UFGWxagORbxXc=s0"
+          }
+        ],
+        "sitenavigationelement": [
+          {
+            "name": "Main Navigation",
+            "url": "Business"
+          },
+          {
+            "name": "Fiber Cities",
+            "url": "Atlanta, GA"
+          },
+          {
+            "name": "Products",
+            "url": "Gigabit internet"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Who is my administrator? - Google Workspace Admin Help",
+      "htmlTitle": "Who is my administrator? - \u003cb\u003eGoogle\u003c/b\u003e Workspace Admin Help",
+      "link": "https://support.google.com/a/answer/6208960?hl=en",
+      "displayLink": "support.google.com",
+      "snippet": "If you use Google services with a company, school, or other group, you probably \nhave an administrator who set up your account or Chrome device. This person ...",
+      "htmlSnippet": "If you use \u003cb\u003eGoogle\u003c/b\u003e services with a company, school, or other group, you probably \u003cbr\u003e\nhave an administrator who set up your account or Chrome device. This person&nbsp;...",
+      "cacheId": "qPmhNbIap2kJ",
+      "formattedUrl": "https://support.google.com/a/answer/6208960?hl=en",
+      "htmlFormattedUrl": "https://support.\u003cb\u003egoogle\u003c/b\u003e.com/a/answer/6208960?hl=en",
+      "pagemap": {
+        "metatags": [
+          {
+            "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no",
+            "format-detection": "email=no"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Google.org brings the best of Google to help solve some of ...",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e.org brings the best of \u003cb\u003eGoogle\u003c/b\u003e to help solve some of ...",
+      "link": "https://google.org/",
+      "displayLink": "google.org",
+      "snippet": "Learn how Google.org uses the best of Google to help nonprofits and social \nenterprises solve humanity's biggest challenges.",
+      "htmlSnippet": "Learn how \u003cb\u003eGoogle\u003c/b\u003e.org uses the best of \u003cb\u003eGoogle\u003c/b\u003e to help nonprofits and social \u003cbr\u003e\nenterprises solve humanity&#39;s biggest challenges.",
+      "cacheId": "i3IgMGM5SwIJ",
+      "formattedUrl": "https://google.org/",
+      "htmlFormattedUrl": "https://\u003cb\u003egoogle\u003c/b\u003e.org/",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQHLsk2LGw-p6iYNTPiAUIhF3sekuEn9hpRKNWLPmjb7Ct5RYEBl52STC4",
+            "width": "310",
+            "height": "163"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://lh3.googleusercontent.com/1kA4d6Jn-j_5ByaplDmw4MX1-T8lZAWOO7kKop8Mmu1-sA9lnVMN8Bn65KeF9JLVpkxDNdGkHAO8H3RIrO-a3kMRpxIX2pdPqz7U-A=w1200-l80-sg-rj",
+            "og:type": "website",
+            "og:site_name": "Google.org",
+            "viewport": "width=device-width, initial-scale=1",
+            "og:title": "Google.org brings the best of Google to help solve some of humanity’s biggest challenges — combining funding, innovation, and technical expertise to support underserved communities and provide opportunity for everyone.",
+            "og:locale": "root",
+            "og:url": "https://google.org/",
+            "og:description": "Learn how Google.org uses the best of Google to help nonprofits and social enterprises solve humanity’s biggest challenges."
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://lh3.googleusercontent.com/1kA4d6Jn-j_5ByaplDmw4MX1-T8lZAWOO7kKop8Mmu1-sA9lnVMN8Bn65KeF9JLVpkxDNdGkHAO8H3RIrO-a3kMRpxIX2pdPqz7U-A=w1200-l80-sg-rj"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Google | History & Facts | Britannica",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e | History &amp; Facts | Britannica",
+      "link": "https://www.britannica.com/topic/Google-Inc",
+      "displayLink": "www.britannica.com",
+      "snippet": "Google, American search engine company, founded in 1998 by Sergey Brin and \nLarry Page, that is a subsidiary of the holding company Alphabet Inc. More than ...",
+      "htmlSnippet": "\u003cb\u003eGoogle\u003c/b\u003e, American search engine company, founded in 1998 by Sergey Brin and \u003cbr\u003e\nLarry Page, that is a subsidiary of the holding company Alphabet Inc. More than&nbsp;...",
+      "cacheId": "zj_myi2V8wMJ",
+      "formattedUrl": "https://www.britannica.com/topic/Google-Inc",
+      "htmlFormattedUrl": "https://www.britannica.com/topic/\u003cb\u003eGoogle\u003c/b\u003e-Inc",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR6s35spp85UgAC39cBWweXVu8cdt7RkPj0ZP_IkEYhnD4GUc2_2ulufsE",
+            "width": "270",
+            "height": "187"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.britannica.com/17/101217-050-89474964/Larry-Page-Sergey-Brin.jpg",
+            "twitter:card": "summary_large_image",
+            "og:type": "ARTICLE",
+            "og:site_name": "Encyclopedia Britannica",
+            "og:title": "Google | History & Facts",
+            "og:image:type": "image/jpeg",
+            "fb:pages": "74442380906",
+            "og:description": "Google, American search engine company, founded in 1998 by Sergey Brin and Larry Page, that is a subsidiary of the holding company Alphabet Inc. More than 70 percent of worldwide online search requests are handled by Google, placing it at the heart of most Internet users’ experience. Learn more about Google.",
+            "twitter:image": "https://cdn.britannica.com/17/101217-050-89474964/Larry-Page-Sergey-Brin.jpg",
+            "fb:app_id": "1887621861548296",
+            "twitter:site": "@britannica",
+            "viewport": "width=device-width, initial-scale=1.0",
+            "twitter:description": "Google, American search engine company, founded in 1998 by Sergey Brin and Larry Page, that is a subsidiary of the holding company Alphabet Inc. More than 70 percent of worldwide online search requests are handled by Google, placing it at the heart of most Internet users’ experience. Learn more about Google.",
+            "og:url": "https://www.britannica.com/topic/Google-Inc"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.britannica.com/17/101217-050-89474964/Larry-Page-Sergey-Brin.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Google Nest, build your connected home - Google Store",
+      "htmlTitle": "\u003cb\u003eGoogle\u003c/b\u003e Nest, build your connected home - \u003cb\u003eGoogle\u003c/b\u003e Store",
+      "link": "https://store.google.com/us/category/connected_home",
+      "displayLink": "store.google.com",
+      "snippet": "Google now makes it simple to purchase your device with professional \ninstallation. Flexible, online scheduling allows you to book an expert for any day \nof the ...",
+      "htmlSnippet": "\u003cb\u003eGoogle\u003c/b\u003e now makes it simple to purchase your device with professional \u003cbr\u003e\ninstallation. Flexible, online scheduling allows you to book an expert for any day \u003cbr\u003e\nof the&nbsp;...",
+      "formattedUrl": "https://store.google.com/us/category/connected_home",
+      "htmlFormattedUrl": "https://store.\u003cb\u003egoogle\u003c/b\u003e.com/us/category/connected_home",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR1Ecgo2pKw4blPVwujFGVeEN832GHdg2qy3XLRiN5TLpyzia-Ivn9Qvcc",
+            "width": "307",
+            "height": "164"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://lh3.googleusercontent.com/CHcu6dfhITcOQEP_L1Ch7bvYLFwVDSkYZM8h0ePHe0TpPayd9sNc-9SxcKeRudFV17tVcRAmontX9xuLSOJs1A=rw-v0",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "Google Nest Connected Home",
+            "og:site_name": "Google Store",
+            "msvalidate.01": "5B96ACB2BFE6A95B22143473B8763663",
+            "og:title": "Google Nest Connected Home",
+            "msapplication-tileimage": "https://www.gstatic.com/images/branding/product/1x/googleg_96dp.png",
+            "og:description": "Command the thoughtful devices that connect your home.",
+            "twitter:image": "https://lh3.googleusercontent.com/CHcu6dfhITcOQEP_L1Ch7bvYLFwVDSkYZM8h0ePHe0TpPayd9sNc-9SxcKeRudFV17tVcRAmontX9xuLSOJs1A=rw-v0",
+            "twitter:image:alt": "Nest Doorbell and Google Home Hub",
+            "twitter:site": "“@madebygoogle”",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+            "twitter:description": "Command the thoughtful devices that connect your home.",
+            "og:url": "https://store.google.com/category/connected_home"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://lh3.googleusercontent.com/CHcu6dfhITcOQEP_L1Ch7bvYLFwVDSkYZM8h0ePHe0TpPayd9sNc-9SxcKeRudFV17tVcRAmontX9xuLSOJs1A=rw-v0"
+          }
+        ]
+      }
+    }
+  ]
+}

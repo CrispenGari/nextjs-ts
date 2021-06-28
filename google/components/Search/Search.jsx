@@ -1,9 +1,17 @@
 import styles from "./Search.module.css";
 import { IoMdMic } from "react-icons/io";
 import { Search as S } from "@material-ui/icons";
-const Search = ({ searchResults }) => {
+import router from "next/router";
+
+import { useState } from "react";
+
+const Search = ({ searchResults, query: searchQuery }) => {
+  const [query, setQuery] = useState(searchQuery ?? "");
   const search = (e) => {
     e.preventDefault();
+    if (query) {
+      router.push(`/search?q=${String(query).toLowerCase().replace(" ", "+")}`);
+    }
   };
   if (searchResults) {
     return (
@@ -15,7 +23,12 @@ const Search = ({ searchResults }) => {
 
         <form onSubmit={search} className={styles.search__results__bar}>
           <S onClick={search} className={styles.search__results__bar__icon} />
-          <input type="text" placeholder="Search Google or type a URL" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search Google or type a URL"
+          />
           <IoMdMic className={styles.search__results__bar__icon} />
         </form>
       </div>
@@ -30,7 +43,12 @@ const Search = ({ searchResults }) => {
 
       <form onSubmit={search} className={styles.search__bar}>
         <S onClick={search} className={styles.search__bar__icon} />
-        <input type="text" placeholder="Search Google or type a URL" />
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          type="text"
+          placeholder="Search Google or type a URL"
+        />
         <IoMdMic className={styles.search__bar__icon} />
       </form>
     </div>
