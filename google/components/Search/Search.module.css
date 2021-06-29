@@ -9,6 +9,7 @@
   -webkit-user-drag: none;
   user-select: none;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 .search__bar {
   display: flex;
@@ -60,25 +61,50 @@
   align-items: center;
   width: 550px;
   border-radius: 999px;
-  padding: 0px 20px;
+  padding: 0px 15px;
   background: white;
   box-shadow: 2px 2px 2px 2px lightgray;
 }
+
 .search__results__bar > input {
   flex: 1;
   outline: none;
   border: none;
   font-size: 14px;
-  padding: 8px 20px;
+  padding: 8px 15px;
 }
 .search__results__bar__icon {
-  color: #535156;
+  color: #4285f4;
   cursor: pointer;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 20px;
 }
 .search__results__bar__icon:last-of-type {
   color: #4285f4;
   font-size: 20px;
 }
+.search__results__bar__icon:first-of-type {
+  color: #535156;
+  margin-left: 0px;
+}
+.search__results__bar__icon__blue {
+  color: #4285f4 !important;
+  font-size: 20px !important;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.search__results__bar__right {
+  display: flex;
+  align-items: center;
+}
+.search__results__bar__right > div {
+  height: 20px;
+  border-left: 2px solid lightgray;
+  margin-left: 5px;
+}
+
 @media only screen and (max-width: 1000px) {
   .search__results__bar {
     width: 400px !important;

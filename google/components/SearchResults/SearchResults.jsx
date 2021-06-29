@@ -1,19 +1,17 @@
 import styles from "./SearchResults.module.css";
 import SearchResult from "../SearchResult/SearchResult";
-const SearchResults = ({data:{
-  items, searchInformation
-}}) => {
+import data from "../../data.json";
+const SearchResults = () => {
   return (
     <div className={styles.search__results}>
       <p>
-        About {searchInformation?.formattedTotalResults} results (
-        {searchInformation?.formattedSearchTime} seconds)
+        About {data?.searchInformation?.formattedTotalResults} results (
+        {data?.searchInformation?.formattedSearchTime} seconds)
       </p>
-      {items?.map((result, index) => (
+      {data?.items?.map((result, index) => (
         <SearchResult key={index} result={result} />
       ))}
     </div>
   );
 };
-
 export default SearchResults;

@@ -8,15 +8,9 @@ import { useEffect, useLayoutEffect, useState } from "react";
 const Search = ({ data }) => {
   console.log(data);
   const [query, setQuery] = useState({});
-
-  useEffect(() => {
-    const q = router?.query;
-    setQuery(q);
-  }, [router]);
-
   return (
     <div className={styles.search}>
-      <ResultsHeader query={query?.q?.replace("+", " ")} />
+      <ResultsHeader />
       <SearchResults data={data} />
     </div>
   );
@@ -26,12 +20,14 @@ export default Search;
 export async function getServerSideProps(context) {
   const { q } = await context?.query;
   if (q) {
-    const url = `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_CUSTOM_SEARCH_API}&cx=${process.env.PROGRAMABLE_SEARCH_ENGINE_ID}&q=${q}`;
-    const data = await fetch(url).then((res) => res.json());
+    // const url = `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_CUSTOM_SEARCH_API}&cx=${process.env.PROGRAMABLE_SEARCH_ENGINE_ID}&q=${q}`;
+    // const data = await fetch(url).then((res) => res.json());
 
     return {
       props: {
-        data,
+        data: {
+          message: null,
+        },
       },
     };
   } else {
