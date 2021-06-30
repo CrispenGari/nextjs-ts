@@ -8,6 +8,8 @@
   place-items: center;
   margin: 5px;
   padding: 10px auto 5px auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .shortcut__icon__btn {
@@ -27,6 +29,11 @@
 .shortcut p {
   font-size: 13px;
   font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
 }
 .shortcut__avatar {
   margin-top: 20px;

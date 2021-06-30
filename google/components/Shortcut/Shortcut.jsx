@@ -1,18 +1,24 @@
 import styles from "./Shortcut.module.css";
 import { Avatar, IconButton } from "@material-ui/core";
 import { MoreVert } from "@material-ui/icons";
-const Shortcut = () => {
+import router from "next/router";
+const Shortcut = ({ shortcut }) => {
   return (
-    <div className={styles.shortcut}>
+    <div
+      className={styles.shortcut}
+      onClick={() => {
+        router.push(`/search?q=${shortcut?.shortcut?.toLowerCase()}`);
+      }}
+    >
       <IconButton className={styles.shortcut__icon__btn} title="More actions">
         <MoreVert className={styles.shortcut__icon} />
       </IconButton>
       <Avatar
         className={styles.shortcut__avatar}
-        alt={"G"}
-        src="https://assets.stickpng.com/img.png"
+        alt={shortcut?.shortcut}
+        src={shortcut?.shortcutImage ?? "https://assets.stickpng.com/img.png"}
       />
-      <p>Google</p>
+      <p>{shortcut?.shortcut}</p>
     </div>
   );
 };

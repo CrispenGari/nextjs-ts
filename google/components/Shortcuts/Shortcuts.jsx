@@ -1,13 +1,11 @@
 import styles from "./Shortcuts.module.css";
 import Shortcut from "../Shortcut/Shortcut";
-const Shortcuts = () => {
+const Shortcuts = ({ shortcuts }) => {
   return (
     <div className={styles.shortcuts}>
-      {Array(10)
-        .fill(null)
-        .map((_, index) => (
-          <Shortcut key={index} />
-        ))}
+      {shortcuts?.map((shortcut, index) => (
+        <Shortcut key={index} shortcut={shortcut} />
+      ))}
     </div>
   );
 };

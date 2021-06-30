@@ -16,6 +16,19 @@
   font-weight: 500;
   font-size: 14px;
 }
+.header__button {
+  cursor: pointer;
+  color: white;
+  background: #4285f4;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  width: fit-content;
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 400;
+}
 .header__top a:hover {
   text-decoration: underline #535156;
 }

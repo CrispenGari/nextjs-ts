@@ -1,6 +1,6 @@
 ### Google
 
-This is a google clone UI that searches and get results back from the [Google API](https://developers.google.com/custom-search/v1/using_rest) and the [Programable Search Engine](https://cse.google.com/cse/setup/)
+This is a google clone UI that searches and get results back from the [Google API](https://developers.google.com/custom-search/v1/using_rest) and the [Programable Search Engine](https://cse.google.com/cse/all)
 
 For more about the GOOGLE API Read [this](https://developers.google.com/custom-search/v1/using_rest)
 

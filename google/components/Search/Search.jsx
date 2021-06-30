@@ -2,9 +2,7 @@ import styles from "./Search.module.css";
 import { IoMdMic, IoMdClose } from "react-icons/io";
 import { Search as S } from "@material-ui/icons";
 import router from "next/router";
-
 import { useState, useEffect } from "react";
-
 const Search = ({ searchResults }) => {
   const [query, setQuery] = useState("");
 
@@ -33,7 +31,7 @@ const Search = ({ searchResults }) => {
     return (
       <div className={styles.search__results}>
         <img
-        onClick={()=>router.push('/')}
+          onClick={() => router.push("/")}
           src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
           alt="logo"
         />

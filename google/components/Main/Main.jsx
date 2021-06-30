@@ -3,7 +3,7 @@ import styles from "./Main.module.css";
 import Search from "../Search/Search";
 import { MdCreate } from "react-icons/md";
 import Shortcuts from "../Shortcuts/Shortcuts";
-const Main = () => {
+const Main = ({ shortcuts }) => {
   return (
     <div className={styles.main}>
       <div className={styles.main__top}>
@@ -11,7 +11,7 @@ const Main = () => {
       </div>
       <div className={styles.main__main}>
         <Search />
-        <Shortcuts />
+        <Shortcuts shortcuts={shortcuts} />
       </div>
       <div className={styles.main__main__customize} title="Customize this page">
         <MdCreate className={styles.main__main__customize__icon} />

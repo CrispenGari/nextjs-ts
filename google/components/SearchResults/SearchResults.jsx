@@ -1,7 +1,7 @@
 import styles from "./SearchResults.module.css";
 import SearchResult from "../SearchResult/SearchResult";
-import data from "../../data.json";
-const SearchResults = () => {
+// import data from "../../data.json";
+const SearchResults = ({ data }) => {
   return (
     <div className={styles.search__results}>
       <p>

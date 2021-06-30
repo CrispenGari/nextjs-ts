@@ -6,4 +6,5 @@
   padding: 10px;
   margin: 20px auto;
   justify-content: space-evenly;
+  min-height: 200px;
 }
