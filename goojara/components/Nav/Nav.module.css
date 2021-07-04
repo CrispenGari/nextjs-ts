@@ -3,6 +3,7 @@
   align-items: center;
   width: 100%;
   padding: 5px 30px 0 30px;
+  background-color: #eff1fa;
   border-bottom: 1px solid lightgray;
 }
 .nav h1 {

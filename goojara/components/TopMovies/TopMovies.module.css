@@ -1,0 +1,13 @@
+.top__movies {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2px;
+  background-color: #eff1fa;
+  justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 1200px) {
+  .top__movies {
+    padding: 5px 30px;
+  }
+}

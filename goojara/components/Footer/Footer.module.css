@@ -1,0 +1,25 @@
+.footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid lightgray;
+  margin-top: 10px;
+}
+.footer > small {
+  color: #63c0eb;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.footer > small:hover {
+  text-decoration: underline #63c0eb;
+}
+.footer h2 {
+  color: #777777;
+  font-size: 1.1rem;
+}
+.footer h2 > span {
+  color: black;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
