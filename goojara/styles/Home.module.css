@@ -7,3 +7,15 @@
 .home::-webkit-scrollbar {
   display: none;
 }
+.home__main {
+  display: flex !important;
+  flex-wrap: wrap;
+  padding: 5px 30px;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 1000px) {
+  .home__main {
+    padding: 5px;
+  }
+}

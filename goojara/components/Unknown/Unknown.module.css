@@ -1,0 +1,21 @@
+.unknown {
+  font-size: 13px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  width: 100%;
+  min-width: 300px;
+  margin-left: 10px;
+  flex: 0.4;
+}
+.unknown a {
+  color: #0000ff !important;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .unknown {
+    flex: 1;
+    margin: 10px 0px 10px 0px;
+  }
+}
