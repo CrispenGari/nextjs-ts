@@ -1,0 +1,40 @@
+.header {
+  color: white;
+  background-color: #2d6ab1;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+.header h1 {
+  user-select: none;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 400 !important;
+  margin-right: 30px;
+}
+.header__search {
+  background-color: rgb(129, 166, 208);
+  flex: 1;
+  max-width: 350px;
+  display: flex;
+  border-radius: 5px !important;
+}
+.header__search input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  flex: 1;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+  border-radius: 5px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .header__search {
+    max-width: 250px !important;
+  }
+}
