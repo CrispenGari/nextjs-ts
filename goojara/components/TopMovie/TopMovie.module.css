@@ -5,6 +5,25 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.top__movie__top {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.top__movie__top > p {
+  font-size: 0.8rem;
+  color: white;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  border-top-right-radius: 5px;
+}
+.top__movie__top > p:first-child {
+  background-color: #428bca;
+  border-top-left-radius: 5px;
+}
 .top__movie h2 {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -21,7 +40,7 @@
   padding: 5px;
 }
 .top__movie:hover {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .top__movie img {
   width: 100%;

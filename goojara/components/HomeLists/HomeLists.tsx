@@ -1,4 +1,5 @@
 import React from "react";
+import HomeListItem from "../HomeListItem/HomeListItem";
 import styles from "./HomeLists.module.css";
 const HomeLists: React.FC = () => {
   return (
@@ -11,7 +12,13 @@ const HomeLists: React.FC = () => {
         <h1>A-Z</h1>
         <h1>Language</h1>
       </div>
-      <div className={styles.home__lists__movies}></div>
+      <div className={styles.home__lists__movies}>
+        {Array(50)
+          .fill(null)
+          .map((_, i) => (
+            <HomeListItem key={i} />
+          ))}
+      </div>
     </div>
   );
 };

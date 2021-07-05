@@ -4,6 +4,7 @@
   padding-top: 2px;
   background-color: #eff1fa;
   justify-content: space-evenly;
+  padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 1200px) {

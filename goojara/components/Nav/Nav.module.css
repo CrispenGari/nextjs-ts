@@ -16,7 +16,7 @@
 
   text-align: center;
 }
-.nav h1:first-of-type {
+.nav h1.nav__active {
   border-bottom: 3px solid #2d6ab1;
 }
 

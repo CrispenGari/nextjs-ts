@@ -8,7 +8,7 @@ const TopMovies: React.FC = () => {
       {Array(6)
         .fill(null)
         .map((_, key) => (
-          <TopMovie key={key} />
+          <TopMovie key={key} withHeader={false} />
         ))}
     </div>
   );

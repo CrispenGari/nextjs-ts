@@ -1,0 +1,40 @@
+.watch {
+  display: flex;
+  flex-direction: column;
+}
+
+.watch__nav {
+  display: flex;
+  padding: 10px 30px;
+  border-bottom: 1px solid #ffa500;
+  margin-bottom: 10px;
+}
+.watch__nav h1 {
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  font-size: 13px;
+  color: black;
+  font-weight: 400;
+  width: 70px;
+  text-align: center;
+  margin-left: 5px;
+  padding: 5px 0 !important;
+  cursor: pointer;
+  background-color: #eff1fa;
+}
+
+.watch__container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.watch__nav h1:first-child {
+  background-color: #ffa500;
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  .watch__nav {
+    padding-left: 2px;
+  }
+}
