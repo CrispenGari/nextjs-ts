@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["www.levidia.to"],
+    domains: ["www.levidia.to", "image.tmdb.org"],
   },
 };

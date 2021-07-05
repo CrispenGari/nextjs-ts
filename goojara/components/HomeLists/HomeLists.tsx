@@ -1,7 +1,8 @@
 import React from "react";
 import HomeListItem from "../HomeListItem/HomeListItem";
 import styles from "./HomeLists.module.css";
-const HomeLists: React.FC = () => {
+
+const HomeLists = (props: any) => {
   return (
     <div className={styles.home__lists}>
       <div className={styles.home__lists__nav}>
@@ -13,11 +14,9 @@ const HomeLists: React.FC = () => {
         <h1>Language</h1>
       </div>
       <div className={styles.home__lists__movies}>
-        {Array(50)
-          .fill(null)
-          .map((_, i) => (
-            <HomeListItem key={i} />
-          ))}
+        {props?.movies.map((movie, i) => (
+          <HomeListItem key={i} movie={movie} />
+        ))}
       </div>
     </div>
   );

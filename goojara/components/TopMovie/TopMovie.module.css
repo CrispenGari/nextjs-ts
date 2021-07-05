@@ -18,11 +18,13 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  border-top-right-radius: 5px;
 }
 .top__movie__top > p:first-child {
   background-color: #428bca;
   border-top-left-radius: 5px;
+}
+.top__movie__top > p:last-child {
+  border-top-right-radius: 5px;
 }
 .top__movie h2 {
   width: 100%;
@@ -38,6 +40,9 @@
   font-weight: 400;
   user-select: none;
   padding: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .top__movie:hover {
   opacity: 0.6;
