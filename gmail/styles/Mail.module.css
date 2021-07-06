@@ -4,3 +4,7 @@
   padding: 0;
   margin: 0;
 }
+.mail__main {
+  display: flex;
+  justify-content: flex-start;
+}

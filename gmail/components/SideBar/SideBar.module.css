@@ -1,0 +1,123 @@
+.sidebar {
+  width: 22%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__compose {
+  margin: 10px;
+  border: 1px solid lightgray;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 32px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+  justify-content: center;
+  padding: 5px;
+  font-weight: 500;
+  user-select: none;
+  margin-bottom: 20px;
+}
+.sidebar__compose__icon {
+  font-size: 35px;
+  color: #4285f4;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.sidebar > h1 {
+  user-select: none;
+  color: #202124;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 20px 5px 20px;
+  border-top: 1px solid lightgray;
+}
+.sidebar__profile {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  justify-content: space-between;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  user-select: none;
+  padding-right: 10px;
+  align-items: center;
+}
+.sidebar__profile > div {
+  display: flex;
+  align-items: center;
+}
+.sidebar__profile__icon {
+  color: #707071 !important;
+  font-size: 16px;
+  padding-top: 3px;
+}
+.sidebar__profile > div h1 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 5px;
+  color: #202124;
+  user-select: none;
+  cursor: pointer;
+}
+.sidebar__profile__avatar {
+  width: 30px !important;
+  height: 30px !important;
+  cursor: pointer;
+}
+.sidebar__profile > button {
+  color: #707071 !important;
+  padding: 5px !important;
+  width: fit-content !important;
+  height: fit-content !important;
+}
+.sidebar__recent__chats {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-height: 100px;
+}
+.sidebar__recent__chats > p {
+  font-size: 13px;
+  user-select: none;
+  color: #707071 !important;
+  font-weight: 400;
+}
+.sidebar__recent__chats > p:last-of-type {
+  color: #1155cc !important;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 3px;
+}
+.sidebar__recent__chats > p:last-of-type:hover {
+  text-decoration: underline #1155cc;
+}
+.sidebar__footer {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  border-top: 1px solid lightgray;
+  background-color: white;
+}
+.sidebar__footer > p {
+  padding: 8px;
+  cursor: pointer;
+}
+.sidebar__footer > p {
+  color: #707071 !important;
+}
+.sidebar__footer > p:nth-of-type(2) {
+  color: unset !important;
+}
+.sidebar__footer > p:hover {
+  background-color: #fafafa;
+}
