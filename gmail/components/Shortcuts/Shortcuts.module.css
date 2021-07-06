@@ -1,5 +1,29 @@
 .shortcuts {
   display: flex;
   flex-direction: column;
-  max-width: 60px;
+  max-width: fit-content;
+  align-items: center;
+  padding: 20px 10px;
+  position: sticky;
+}
+
+.shortcuts > button {
+  width: fit-content !important;
+  height: fit-content !important;
+  padding: 5px !important;
+  margin: 10px 0px;
+}
+.shortcuts > div {
+  width: 100%;
+  border-bottom: 1px solid lightgray !important;
+}
+
+.shortcuts > button:nth-of-type(2) {
+  color: #fbbc04 !important;
+}
+.shortcuts > button:nth-of-type(3) {
+  color: #4a8af4 !important;
+}
+.shortcuts > button:nth-of-type(4) {
+  color: #1a73e8 !important;
 }
