@@ -1,0 +1,5 @@
+.main__nav {
+  display: flex;
+  padding: 0;
+  border-bottom: 1px solid lightgray;
+}
