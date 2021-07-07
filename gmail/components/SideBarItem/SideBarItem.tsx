@@ -1,6 +1,21 @@
+import React from "react";
 import styles from "./SideBarItem.module.css";
 
-const SideBarItem = ({ badgeContent, title, Icon, active }) => {
+interface IconProps {
+  className: string;
+}
+interface SideBarItemProps {
+  badgeContent?: string;
+  title: string;
+  Icon: React.FC<IconProps>;
+  active: boolean;
+}
+const SideBarItem: React.FC<SideBarItemProps> = ({
+  badgeContent,
+  title,
+  Icon,
+  active,
+}) => {
   return (
     <div
       className={!active ? styles.sidebar__item : styles.sidebar__item__active}
