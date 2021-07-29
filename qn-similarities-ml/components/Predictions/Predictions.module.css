@@ -1,0 +1,18 @@
+.predictions {
+  background-color: var(--color-c);
+  color: white;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.predictions h1 {
+  font-weight: 400;
+  padding: 2px;
+  font-size: 1rem;
+}

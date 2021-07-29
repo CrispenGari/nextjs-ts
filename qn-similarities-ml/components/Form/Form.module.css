@@ -1,0 +1,31 @@
+.form {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  position: relative;
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.form__loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  z-index: 6;
+  border-radius: 5px;
+  user-select: none;
+  user-zoom: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}

@@ -1,12 +1,19 @@
-import React from "react";
-import styles from "../styles/Home.module.css";
-
-const Home: React.FC = () => {
+import styles from "../styles/Mail.module.css";
+import Header from "../components/Header/Header";
+import Sidebar from "../components/SideBar/Sidebar";
+import Shortcuts from "../components/Shortcuts/Shortcuts";
+import Main from "../components/Main/Main";
+const Index = () => {
   return (
-    <div className={styles.home}>
-      <h1>Home</h1>
+    <div className={styles.mail}>
+      <Header />
+      <div className={styles.mail__main}>
+        <Sidebar />
+        <Main />
+        <Shortcuts />
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Index;

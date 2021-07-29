@@ -1,0 +1,10 @@
+.navitem,
+.navitem__active {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-c);
+}
+.navitem__active {
+  color: var(--color-a);
+}

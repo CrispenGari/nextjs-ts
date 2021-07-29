@@ -1,0 +1,18 @@
+.activity__indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid var(--color-b);
+  border-radius: 50%;
+  border-left-color: var(--color-c);
+  transform: rotate(0deg);
+  animation: activity 1s ease-in-out 0s infinite alternate forwards;
+}
+
+@keyframes activity {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
