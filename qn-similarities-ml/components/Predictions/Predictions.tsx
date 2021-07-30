@@ -4,19 +4,19 @@ import styles from "./Predictions.module.css";
 
 interface Prediction {
   classLabel: number;
-  className: string;
+  class: string;
   probability: number;
+  time;
 }
 class Props {
   public prediction: Prediction;
 }
-const Predictions: React.FC<Props> = ({
-  prediction: { classLabel, className, probability },
-}) => {
+const Predictions: React.FC<Props> = ({ prediction }) => {
   return (
     <div className={styles.predictions}>
-      <h1>{className}</h1>
-      <h1> {probability}%</h1>
+      <h1>{prediction?.class}</h1>
+      <h1> {Number(prediction?.probability * 100).toFixed(0)}%</h1>
+      <p>{Number.parseFloat(prediction?.time).toFixed(2)}s</p>
     </div>
   );
 };

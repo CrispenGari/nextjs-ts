@@ -16,3 +16,9 @@
   padding: 2px;
   font-size: 1rem;
 }
+.predictions > p {
+  width: 100%;
+  text-align: end;
+  color: white;
+  font-size: 0.7rem;
+}
