@@ -13,7 +13,7 @@ interface T {
 const Form: React.FC<any> = () => {
   const [question1, setQuestion1] = React.useState<string>("");
   const [question2, setQuestion2] = React.useState<string>("");
-  const [predictions, setPredictions] = React.useState<T | any>({});
+  const [predictions, setPredictions] = React.useState<T | any>(null);
   const [loading, setLoading] = React.useState(false);
 
   const predict = async (e) => {
@@ -25,7 +25,18 @@ const Form: React.FC<any> = () => {
           question1,
           question2,
         })
-        .then(({ data }) => setPredictions(data))
+        .then(({ data }) => {
+          setPredictions(data);
+          axios
+            .post("http://localhost:3001/history", {
+              date: new Date().toDateString(),
+              question1: question1,
+              question2: question2,
+              classLabel: data?.class,
+              probability: data?.probability,
+            })
+            .catch((error) => console.error(error));
+        })
         .finally(() => setLoading(false));
     }
     return;

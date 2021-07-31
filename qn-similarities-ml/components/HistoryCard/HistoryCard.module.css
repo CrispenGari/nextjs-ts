@@ -1,0 +1,50 @@
+.history__card {
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  padding: 10px;
+  user-select: none;
+  user-zoom: none;
+  border-radius: 5px;
+  margin: 5px auto;
+}
+.history__card__top {
+  display: flex;
+  flex-direction: column;
+}
+.history__card__top > p {
+  display: flex;
+  flex-direction: column;
+}
+.history__card__top > p > span:first-child {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.history__card__top > p > span:last-child {
+  color: gray;
+  padding: 10px 0;
+}
+
+.history__card > h1 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--color-a);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.history__card > h1 > span:first-child {
+  color: var(--color-a);
+  margin-right: 5px;
+}
+.history__card > h1 > span:last-child {
+  color: var(--color-c);
+}
+.history__card > p {
+  width: 100%;
+  color: gray;
+  text-align: end;
+  font-size: 0.8rem;
+}
