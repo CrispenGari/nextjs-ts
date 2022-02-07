@@ -1,0 +1,15 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.login > form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
