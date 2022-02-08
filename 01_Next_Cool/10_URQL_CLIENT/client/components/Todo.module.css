@@ -1,0 +1,32 @@
+.todo {
+  width: 100%;
+  padding: 10px;
+  transition: all 1s;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: repeating-radial-gradient(cornflowerblue, lightseagreen);
+}
+.todo > div > h1 {
+  font-size: 1rem;
+}
+.todo > div > h1.todo__done {
+  text-decoration: line-through black;
+}
+.todo > div > p {
+  color: gray;
+  font-size: 0.8rem;
+}
+.todo > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.todo > p > button {
+  cursor: pointer;
+  margin-left: 5px;
+}

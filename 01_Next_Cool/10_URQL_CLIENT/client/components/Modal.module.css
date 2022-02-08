@@ -1,0 +1,30 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal > form {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  margin: 5px auto;
+  display: flex;
+  flex-direction: column;
+}
+.modal > form > input {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.modal > form > p > button {
+  margin-right: 10px;
+  padding: 3px 5px;
+  cursor: pointer;
+  border: none;
+  cursor: pointer;
+}
