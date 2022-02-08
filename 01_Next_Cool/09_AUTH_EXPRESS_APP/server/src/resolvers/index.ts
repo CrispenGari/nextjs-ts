@@ -1,4 +1,5 @@
 import { NonEmptyArray } from "type-graphql";
+import { CookieResolver } from "./auth/CookieResolver";
 import { HelloWorldResolver } from "./hello/HelloWorldResolver";
 import { LoginResolver } from "./user/Login";
 import { LogoutResolver } from "./user/Logout";
@@ -11,4 +12,5 @@ export const Resolvers: NonEmptyArray<Function> | NonEmptyArray<string> = [
   UserResolver,
   LoginResolver,
   LogoutResolver,
+  CookieResolver,
 ];

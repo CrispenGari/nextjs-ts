@@ -1,48 +1,63 @@
-import { useMutation } from "@apollo/client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { LOGIN_MUTATION } from "../graphql/mutations/login";
-import { USER_QUERY } from "../graphql/queries/user";
 import { apolloClient } from "../lib";
+import { GetServerSidePropsContext } from "next";
 
 import styles from "./Login.module.css";
-
-export async function getServerSideProps(context) {
-  const user = await apolloClient.query({
-    query: USER_QUERY,
+import { COOKIE_QUERY } from "../graphql/queries/cookie";
+import { useRouter } from "next/router";
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const userCookie: string = context.req.cookies?.user;
+  const validCookie = await apolloClient.query({
+    query: COOKIE_QUERY,
+    variables: {
+      input: userCookie ? userCookie : "",
+    },
   });
-  if (user?.data?.user) {
+  if (validCookie.data?.cookie) {
     return {
       redirect: {
-        permanent: true,
+        permanent: false,
         destination: "/",
       },
     };
   }
   return {
-    props: {
-      user: null,
-    }, // will be passed to the page component as props
+    props: {}, // will be passed to the page component as props
   };
 }
 
 const Login = () => {
   const [ue, setUe] = useState("");
   const [pwd, setPwd] = useState("");
-  const [login, { loading, data }] = useMutation(LOGIN_MUTATION);
+  const [loading, setLoading] = React.useState(false);
+  const [data, setData] = React.useState<any>();
+
+  const router = useRouter();
   const loginH = async () => {
-    await login({
+    setLoading(true);
+    const { data } = await apolloClient.mutate({
+      mutation: LOGIN_MUTATION,
       variables: {
         input: {
           usernameOrEmail: ue,
           password: pwd,
         },
+        fetchPolicy: "network-only",
       },
-      fetchPolicy: "network-only",
     });
+
+    setData(data);
+    if ((await data?.login?.user) !== null) {
+      setData(null);
+      setLoading(false);
+      await router.replace("/");
+    } else {
+      setLoading(false);
+    }
   };
 
-  console.log(data);
   return (
     <div className={styles.login}>
       <form

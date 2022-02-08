@@ -7,14 +7,15 @@ let client: ApolloClient<any>;
 
 const createApolloClient = (): ApolloClient<any> => {
   return new ApolloClient({
-    // credentials: "include",
+    credentials: "include",
     ssrMode: __ssrMode__,
     link: createHttpLink({
       uri,
       credentials: "include",
     }),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache()
   });
+
 };
 export const initializeApollo = (initialState = null) => {
   const apolloClient = client ?? createApolloClient();

@@ -1,15 +1,22 @@
 import styles from "../styles/Home.module.css";
 
 import { apolloClient } from "../lib";
-import { USER_QUERY } from "../graphql/queries/user";
 import { NextPage } from "next";
+import { COOKIE_QUERY } from "../graphql/queries/cookie";
+import { useQuery } from "@apollo/client";
+import { USER_QUERY } from "../graphql/queries/user";
+import { LOGOUT_MUTATION } from "../graphql/mutations/logout";
 
 export async function getServerSideProps(context) {
-  const user = await apolloClient.query({
-    query: USER_QUERY,
-  });
+  const userCookie: string = context.req.cookies?.user;
 
-  if (!user?.data?.user) {
+  const validCookie = await apolloClient.query({
+    query: COOKIE_QUERY,
+    variables: {
+      input: userCookie ? userCookie : "",
+    },
+  });
+  if (!validCookie.data?.cookie) {
     return {
       redirect: {
         permanent: false,
@@ -18,16 +25,36 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: {
-      user: JSON.stringify(user.data.user, null, 2),
-    }, // will be passed to the page component as props
+    props: {}, // will be passed to the page component as props
   };
 }
 
-const Home: NextPage<{ user: any }> = ({ user }) => {
+const Home: NextPage = ({}) => {
+  const { loading, data } = useQuery(USER_QUERY, {
+    fetchPolicy: "network-only",
+  });
+
+  const logoutHandler = async () => {
+    await apolloClient.mutate({
+      mutation: LOGOUT_MUTATION,
+      fetchPolicy: "network-only",
+    });
+    await window.location.reload();
+  };
+
   return (
     <div className={styles.app}>
-      <h1>{user}</h1>
+      {loading ? (
+        <p>Loading....</p>
+      ) : (
+        <div>
+          <h3>User Data</h3>
+          <pre>
+            <code>{JSON.stringify(data.user)}</code>
+          </pre>
+          <button onClick={logoutHandler}>LOGOUT</button>
+        </div>
+      )}
     </div>
   );
 };

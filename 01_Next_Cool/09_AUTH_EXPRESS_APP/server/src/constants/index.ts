@@ -1,5 +1,5 @@
 export const __port__: any = process.env.PORT || 3001;
-export const __maxAge__: number = 1000 * 60 * 60 * 24 * 7; // 7 days
+export const __maxAge__: number = 1000 * 60 * 60 * 24 * 365; // 1 year
 export const __secure__: boolean = false;
 export const __cookieName__: string = "user";
 export const __cookieSecret__: string = "this_should_be_hidden";

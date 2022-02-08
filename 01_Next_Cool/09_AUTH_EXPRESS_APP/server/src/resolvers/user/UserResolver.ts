@@ -7,8 +7,6 @@ export class UserResolver {
   // Getting the user by session id
   @Query(() => User, { nullable: true })
   async user(@Ctx() { req }: CtxType): Promise<User | undefined> {
-    console.log(req.session.userId);
-
     if (typeof req.session.userId !== "undefined") {
       return await User.findOne(req.session.userId);
     }
